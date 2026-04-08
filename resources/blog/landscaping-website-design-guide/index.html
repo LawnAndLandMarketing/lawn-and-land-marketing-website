@@ -3,120 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Makes a Landscaping Website Actually Convert (And What Most Get Wrong) | Lawn & Land Marketing</title>
-  <meta name="description" content="A landscaping website that looks good is nice. One that converts visitors into booked jobs is a business asset. Learn what separates the two — and how to build the latter.">
+  <title>Landscaping Website Design Guide | Lawn &amp; Land Marketing</title>
+  <meta name="description" content="The complete guide to website design for landscaping companies.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://new.lawnlab.dev/resources/blog/landscaping-website-design-guide/">
-  <meta property="og:title" content="What Makes a Landscaping Website Actually Convert (And What Most Get Wrong)">
-  <meta property="og:description" content="A landscaping website that looks good is nice. One that converts visitors into booked jobs is a business asset. Learn what separates the two — and how to build the latter.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://new.lawnlab.dev/resources/blog/landscaping-website-design-guide/">
+  <meta property="og:title" content="Landscaping Website Design Guide | Lawn &amp; Land Marketing">
+  <meta property="og:description" content="The complete guide to website design for landscaping companies.">
+  <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/assets/logos/logo-badge.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,600;1,700;1,800&family=Mulish:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Makes a Landscaping Website Actually Convert (And What Most Get Wrong)","description":"A landscaping website that looks good is nice. One that converts visitors into booked jobs is a business asset. Learn what separates the two — and how to build the latter.","datePublished":"2026-02-05","dateModified":"2026-03-01","author":{"@type":"Person","name":"Matt Foreman","jobTitle":"Founder, Lawn & Land Marketing"},"publisher":{"@type":"Organization","name":"Lawn & Land Marketing","url":"https://new.lawnlab.dev"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://new.lawnlab.dev/resources/blog/landscaping-website-design-guide/"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a landscaping website cost?","acceptedAnswer":{"@type":"Answer","text":"A quality landscaping website designed to rank and convert typically costs $3,000–$8,000 for a custom build, or $1,500–$3,000 for a well-built template. Cheap websites ($200–$500) almost always cost more in the long run through lost leads, poor SEO performance, and the eventual cost of rebuilding them properly."}},{"@type":"Question","name":"What pages does a landscaping website need?","acceptedAnswer":{"@type":"Answer","text":"At minimum: Homepage, Services (with individual pages for each service), About, Contact, and a Reviews/Results page. For SEO, you also need location-specific service pages for each city you serve. A blog with high-quality content is valuable for long-term organic traffic."}},{"@type":"Question","name":"Should my landscaping website have a photo gallery?","acceptedAnswer":{"@type":"Answer","text":"Yes, but integrated strategically — not as a standalone gallery page. Photos should appear on relevant service pages showing before/after results, alongside testimonials from those jobs. A gallery page people visit once and leave doesn't convert. Photos embedded in context sell services."}}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://new.lawnlab.dev/"},{"@type":"ListItem","position":2,"name":"Programs","item":"https://new.lawnlab.dev/programs/"},{"@type":"ListItem","position":3,"name":"Growth","item":"https://new.lawnlab.dev/programs/growth/"}]},{"@type":"Service","name":"Growth Program","serviceType":"Landscaping marketing program","provider":{"@type":"Organization","name":"Lawn & Land Marketing","url":"https://new.lawnlab.dev/"},"url":"https://new.lawnlab.dev/programs/growth/","description":"Marketing program for landscaping companies under $1M focused on foundation, lead generation, automation, and steady growth."}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://new.lawnlab.dev/"},{"@type":"ListItem","position":2,"name":"Programs","item":"https://new.lawnlab.dev/programs/"},{"@type":"ListItem","position":3,"name":"Growth","item":"https://new.lawnlab.dev/programs/growth/"}]},{"@type":"Service","name":"Growth Program","serviceType":"Landscaping marketing program","provider":{"@type":"Organization","name":"Lawn & Land Marketing","url":"https://new.lawnlab.dev/"},"url":"https://new.lawnlab.dev/programs/growth/","description":"Marketing program for landscaping companies under $1M focused on foundation, lead generation, automation, and steady growth."}]}</script>
-  <link rel="stylesheet" href="/assets/css/styles.css?v=49">
-  <link rel="stylesheet" href="/assets/css/article.css?v=1">
-
+  <link rel="stylesheet" href="/assets/css/styles.css?v=38">
   <style>
-    .simple-hero {
-      padding: 136px 0 88px;
-      background:
-        radial-gradient(circle at top left, rgba(172, 231, 29, 0.18), transparent 34%),
-        linear-gradient(180deg, rgba(7, 11, 17, 0.96), rgba(7, 11, 17, 0.9));
+
+    .mega-icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+    }
+
+    .mega-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(172,231,29,0.88);
+      fill: none;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .mega-grid.mega-grid--wide {
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.15fr) 240px;
+      gap: 10px;
+      min-width: 860px;
+    }
+
+    .mega-featured-card--compact h4 { max-width: 14ch; }
+
+    .nav-cta.nav-cta--primary {
       position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       overflow: hidden;
+      padding: 9px 24px;
+      border: 1px solid rgba(172,231,29,0.24);
+      background: linear-gradient(135deg, #ace71d 0%, #d5ff67 100%);
+      box-shadow: 0 18px 40px rgba(172,231,29,0.22);
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 16px;
+    }
+
+    .nav-cta.nav-cta--primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 10%, rgba(255,255,255,0.4) 35%, transparent 60%);
+      transform: translateX(-150%);
+      animation: navCtaShimmer 4.8s ease-in-out infinite;
+    }
+
+    .nav-cta__label,
+    .nav-cta__icon {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-cta__icon {
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-cta__icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: #0a1a00;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .nav-cta.nav-cta--primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 46px rgba(172,231,29,0.28);
+    }
+
+    .nav-cta.nav-cta--primary:hover .nav-cta__icon {
+      transform: translateX(2px);
+    }
+
+    @keyframes navCtaShimmer {
+      0%, 72%, 100% { transform: translateX(-150%); }
+      82% { transform: translateX(150%); }
+    }
+
+    @media (max-width: 1080px) {
+      .mega-grid.mega-grid--wide {
+        grid-template-columns: 1fr 1fr;
+        min-width: 680px;
+      }
+
+      .mega-grid.mega-grid--wide .mega-col--featured {
+        grid-column: 1 / -1;
+      }
+
+      .mega-featured-card--compact h4 { max-width: none; }
+    }
+
+    @media (max-width: 768px) {
+      .mega-grid.mega-grid--wide {
+        grid-template-columns: 1fr;
+        min-width: 100%;
+      }
+
+      .nav-cta.nav-cta--primary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  
+
+    .simple-hero {
+      position: relative;
+      padding: 40px 0 34px;
+      min-height: 560px;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(180deg, rgba(4,12,7,0.35) 0%, rgba(4,12,7,0.78) 46%, rgba(4,12,7,0.96) 100%),
+        linear-gradient(110deg, rgba(4,12,7,0.90) 0%, rgba(4,12,7,0.64) 46%, rgba(4,12,7,0.82) 100%),
+        var(--hero-image) center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .simple-hero::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background: var(--hero-image, none) center/cover no-repeat;
-      opacity: 0.14;
-      mix-blend-mode: screen;
+      inset: auto 0 0;
+      height: 140px;
+      background: linear-gradient(180deg, transparent, rgba(7,16,10,0.95));
       pointer-events: none;
     }
-    .hero-inner, .blog-shell, .blog-index-shell { position: relative; z-index: 1; }
-    .hero-copy { max-width: 820px; }
-    .crumbs {
-      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-      font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 18px;
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
     }
-    .crumbs a { color: rgba(255,255,255,0.88); text-decoration: none; }
+    .hero-copy { max-width: 760px; }
+    .hero-copy h1 {
+      font-family: var(--font-h);
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 0.96;
+      font-weight: 800;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+    .hero-copy p {
+      max-width: 60ch;
+      font-size: 18px;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 24px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; }
+    .btn svg { flex-shrink: 0; }
     .hero-kicker {
-      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px;
-      padding: 8px 14px; border-radius: 999px; background: rgba(172,231,29,0.12);
-      border: 1px solid rgba(172,231,29,0.28); color: #d5ff67; font-size: 13px; font-weight: 700;
-      letter-spacing: 0.08em; text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      font-family: var(--font-l);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.74);
     }
-    .simple-hero h1 { max-width: 16ch; margin-bottom: 16px; }
-    .simple-hero p { max-width: 760px; font-size: 18px; color: rgba(255,255,255,0.82); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
-    .blog-shell, .blog-index-shell { padding: 72px 0 84px; }
-    .blog-shell .article-wrap {
-      display: grid; grid-template-columns: minmax(0, 270px) minmax(0, 1fr); gap: 36px;
-      align-items: start;
+    .hero-kicker::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 18px rgba(172,231,29,0.8);
     }
-    .blog-toc {
-      position: sticky; top: 110px; padding: 24px; border-radius: 24px;
-      background: rgba(10, 16, 24, 0.78); border: 1px solid rgba(255,255,255,0.08);
-    }
-    .blog-toc-title { color: #fff; font-weight: 800; margin-bottom: 14px; }
-    .blog-toc ol, .blog-toc ul { margin: 0; padding-left: 18px; }
-    .blog-toc li + li { margin-top: 10px; }
-    .blog-toc a { color: rgba(255,255,255,0.72); text-decoration: none; }
-    .blog-article {
-      min-width: 0; padding: 34px; border-radius: 28px; background: rgba(10, 16, 24, 0.82);
-      border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 24px 80px rgba(0,0,0,0.22);
-    }
-    .blog-article > *:first-child { margin-top: 0; }
-    .blog-article p, .blog-article li { color: rgba(255,255,255,0.82); }
-    .blog-article p { margin: 0 0 18px; }
-    .blog-article h2, .blog-article h3, .blog-article h4 { margin-top: 34px; }
-    .blog-article ul, .blog-article ol { margin-bottom: 20px; padding-left: 22px; }
-    .blog-article blockquote, .article-callout {
-      margin: 28px 0; padding: 22px 24px; border-left: 4px solid #ace71d;
-      border-radius: 18px; background: rgba(172,231,29,0.08);
-    }
-    .article-callout { display: flex; gap: 16px; align-items: flex-start; }
-    .callout-icon { font-size: 24px; line-height: 1; }
-    .blog-article table { width: 100%; border-collapse: collapse; margin: 24px 0; }
-    .blog-article th, .blog-article td { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 12px; text-align: left; }
-    .related-section, .cta-band { margin-top: 42px; }
-    .related-grid, .blog-grid-rebuilt {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;
-    }
-    .related-card, .blog-card-rebuilt {
-      display: block; padding: 24px; border-radius: 22px; text-decoration: none;
-      background: rgba(10, 16, 24, 0.82); border: 1px solid rgba(255,255,255,0.08);
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .related-card:hover, .blog-card-rebuilt:hover { transform: translateY(-3px); border-color: rgba(172,231,29,0.4); }
-    .card-kicker { color: #d5ff67; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-    .related-card h3, .blog-card-rebuilt h3 { margin: 12px 0 10px; color: #fff; font-size: 24px; }
-    .related-card p, .blog-card-rebuilt p, .card-meta { color: rgba(255,255,255,0.74); }
-    .cta-band {
-      padding: 30px; border-radius: 28px; background: linear-gradient(135deg, rgba(172,231,29,0.18), rgba(59,130,246,0.12));
-      border: 1px solid rgba(172,231,29,0.24);
-    }
-    .cta-band h2 { margin-top: 0; }
-    .cta-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 20px; }
-    .blog-index-intro { max-width: 820px; margin-bottom: 34px; }
-    .blog-index-intro p { color: rgba(255,255,255,0.78); }
-    @media (max-width: 980px) {
-      .blog-shell .article-wrap, .related-grid, .blog-grid-rebuilt { grid-template-columns: 1fr; }
-      .blog-toc { position: static; }
-      .blog-article { padding: 28px 22px; }
-      .simple-hero { padding-top: 120px; }
+    @media(max-width:768px) {
+      .simple-hero { min-height: auto; padding: 56px 0 28px; }
     }
   </style>
-
 </head>
 <body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <a href="/contact/" class="announcement-inner announcement-inner--link">
+      <span class="announcement-text">🎉 Free strategy call available — book now to discuss your growth &nbsp;→</span>
+    </a>
+  </div>
+
+<!-- NAV with MEGA MENU (canonical — matches homepage) -->
 <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
@@ -356,223 +458,44 @@
       </div>
     </div>
   </nav>
-<section class="simple-hero" style="--hero-image: url('/assets/images/team-bg.jpg');">
-  <div class="container hero-inner">
-    <div class="hero-copy" data-reveal="fade-up">
-      <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/resources/">Resources</a><span>/</span><a href="/resources/blog/">Blog</a><span>/</span><span>What Makes a Landscaping Website Actually Convert (And What Most Get Wrong)</span></div>
-      <div class="hero-kicker">Website Guide</div>
-      <h1>What Makes a Landscaping Website Actually Convert (And What Most Get Wrong)</h1>
-      <p>A landscaping website that looks good is nice. One that converts visitors into booked jobs is a business asset. Learn what separates the two — and how to build the latter.</p>
-      <div class="card-meta">Website Design · February 3, 2026 · 9 min read</div>
-      <div class="hero-actions">
-        <a href="/contact/" class="btn btn--lime">Schedule Strategy Call</a>
-        <a href="/programs/" class="btn btn--ghost">See Our Programs</a>
+
+  <!-- HERO BANNER -->
+  <section class="simple-hero" style="--hero-image: url('/assets/images/programs-hero.jpg');">
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal="fade-up">
+        <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/resources/">Resources</a><span>/</span><a href="/resources/blog/">Blog</a><span>/</span><span>Website Design Guide</span></div>
+        <div class="hero-kicker">Blog</div>
+        <h1>Landscaping website design in 2026: what separates sites that book jobs from sites that don't.</h1>
+        <p>The design principles, structure, and conversion tactics that make landscaping websites actually work.</p>
+        <div class="hero-actions">
+          <a href="/contact/" class="btn btn--lime">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            Schedule Strategy Call
+          </a>
+          <a href="/contact/" class="btn btn--ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Contact Us
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="blog-shell">
-  <div class="container">
-    <div class="article-wrap">
-      <div class="blog-toc"><div class="blog-toc-title">In This Guide</div><ul><li><a href="#top">Overview</a></li></ul></div>
-      <article class="blog-article" id="top">
-        
-<p class="article-lead">Most landscaping websites look fine on the surface. Clean photos, green colors, a map of service areas. But "looks fine" isn't the standard. The standard is: does it turn visitors into booked jobs? When we audit landscaping websites, the same problems appear again and again — and they're costing companies real revenue every month.</p>
-<section id="website-as-sales-tool">
-<h2>Your Website Is a Sales Tool, Not a Brochure</h2>
-<p>This is the mindset shift that separates high-converting landscaping websites from everything else. A brochure exists to inform. A sales tool exists to convert.</p>
-<p>Every design decision — headline placement, photo selection, button color, form length, page structure — should be evaluated through one question: <strong>does this help a homeowner decide to call us?</strong></p>
-<p>When we rebuilt sites for our clients, they saw an average 3.2x increase in estimate requests — not because the sites were prettier, but because every element was engineered to move visitors toward taking action.</p>
-<div class="article-callout">
-<div class="callout-icon">📊</div>
-<div class="callout-body">
-<strong>The conversion gap is enormous.</strong> The average home services website converts 1–2% of visitors into leads. Well-designed landscaping websites with proper conversion optimization convert 4–8%. On 500 monthly visitors with a $400 average job value, that gap is worth $6,000–$24,000/month in revenue.
-            </div>
-</div>
-</section>
-<section id="above-the-fold">
-<h2>What Goes Above the Fold — And Why It's Make or Break</h2>
-<p>"Above the fold" is what visitors see before they scroll. You have roughly 3–5 seconds to communicate who you are, what you do, and why they should care. Most landscaping websites waste this space.</p>
-<h3>What Works Above the Fold</h3>
-<ul>
-<li><strong>Clear headline stating what you do and where:</strong> "Tampa's Most Trusted Landscaping Company" beats "Welcome to Smith Landscaping"</li>
-<li><strong>Visible phone number:</strong> Large, tap-to-call on mobile. In the top right on desktop. Always visible.</li>
-<li><strong>One clear CTA:</strong> "Get a Free Estimate" with a button or inline form. Not three competing options.</li>
-<li><strong>A hero image that shows your work:</strong> Real before/after photos or a stunning completed project — not a stock photo of a generic lawn.</li>
-<li><strong>Social proof anchor:</strong> "★★★★★ 4.9 · 180+ Reviews on Google" right near the headline.</li>
-</ul>
-<h3>What Kills Conversions Above the Fold</h3>
-<ul>
-<li>Hero videos that autoplay and take 8 seconds to load</li>
-<li>Sliders/carousels that move before visitors finish reading</li>
-<li>Generic headlines like "Your Dream Yard Awaits"</li>
-<li>No phone number visible (or small phone number buried in the corner)</li>
-<li>Navigation with 9 items — analysis paralysis</li>
-</ul>
-</section>
-<section id="trust-signals">
-<h2>Trust Signals That Actually Move the Needle</h2>
-<p>Homeowners are hiring someone to come to their property. The trust bar is higher than most industries. Your website needs to actively build confidence throughout the visitor's journey.</p>
-<h3>Reviews and Social Proof</h3>
-<p>Display your Google star rating and review count prominently — ideally in the header, hero section, and again near any lead form. Don't just say "our customers love us" — show the number. "4.9 stars · 215 Google reviews" is a trust bomb.</p>
-<p>Real testimonials with names, photos, and specific outcomes ("they transformed our backyard — best investment we made in the house") outperform generic quotes by a significant margin. Even better: video testimonials.</p>
-<h3>Credentials and Proof</h3>
-<ul>
-<li>Licensed and insured (with certificate numbers if possible)</li>
-<li>Years in business</li>
-<li>Number of jobs completed</li>
-<li>Service area map</li>
-<li>Team photos (real humans, not stock)</li>
-<li>BBB rating or other industry certifications</li>
-</ul>
-<h3>The Portfolio Section</h3>
-<p>Don't just have a gallery. Show before AND after. Show the transformation. That's what sells. A photo of a finished patio is nice — a side-by-side of the overgrown mess it replaced is persuasive.</p>
-</section>
-<section id="service-pages">
-<h2>Service Pages That Rank on Google AND Convert Visitors</h2>
-<p>Every service you offer should have its own dedicated page. Not a section on your homepage — a full page with a unique URL, unique title tag, real content, and its own lead form.</p>
-<p>Why? Because someone searching "sod installation Tampa" is in a completely different mindset than someone searching "landscaping company Tampa." They need a page that speaks directly to their specific need — not a homepage they have to hunt through.</p>
-<h3>What Every Service Page Needs</h3>
-<ul>
-<li><strong>Keyword-optimized title tag and H1</strong> — The page needs to rank for the service + location term</li>
-<li><strong>Explanation of the service</strong> — What it is, what you do, what the process looks like</li>
-<li><strong>Photos of your actual work</strong> — Not stock photos. Real jobs you've done.</li>
-<li><strong>Pricing context</strong> — Doesn't have to be exact, but "starting at $X" or "typical projects range from $X to $Y" builds trust and pre-qualifies visitors</li>
-<li><strong>FAQ section</strong> — Answer the questions Google sees people asking about this service</li>
-<li><strong>Lead form or CTA</strong> — Every page should end with a path to contact</li>
-<li><strong>Internal links</strong> — Link to related services and your programs page</li>
-</ul>
-<p>See how we build service pages in our <a href="/services/landscaping-website-design/">Website Design service</a> — the approach we use for clients is the same one that drives their rankings and conversions.</p>
-</section>
-<section id="mobile-first">
-<h2>Why Mobile-First Isn't Optional in 2026</h2>
-<p>Over 65% of searches for local service businesses happen on mobile. Google indexes the mobile version of your site first. If your site isn't fast, easy to navigate, and optimized for small screens, you're losing leads continuously.</p>
-<h3>Mobile Non-Negotiables</h3>
-<ul>
-<li><strong>Tap-to-call button:</strong> Large, prominent, accessible without scrolling</li>
-<li><strong>Short forms:</strong> 4 fields max on mobile — name, phone, service, zip code</li>
-<li><strong>Fast load times:</strong> Under 3 seconds. Compress every image. Minimize scripts.</li>
-<li><strong>Readable text:</strong> Minimum 16px font. No text that requires pinching to zoom.</li>
-<li><strong>Easy navigation:</strong> Hamburger menu that works, not a desktop menu scaled down</li>
-<li><strong>No pop-ups that are hard to close:</strong> Google penalizes intrusive interstitials on mobile</li>
-</ul>
-<div class="article-callout article-callout--lime">
-<div class="callout-icon">📱</div>
-<div class="callout-body">
-<strong>Test your site right now:</strong> Open your website on your phone. Can you find the phone number in under 5 seconds? Can you tap it to call immediately? Is the text readable without zooming? If any of these fail, you're losing mobile leads every day.
-            </div>
-</div>
-</section>
-<section id="site-speed">
-<h2>Site Speed &amp; Core Web Vitals</h2>
-<p>Google made site speed an official ranking factor — and users made it a conversion factor years before that. A one-second delay in mobile load time increases bounce rate by 32%. For landscaping companies running Google Ads, slow sites mean higher cost per click and lower Quality Scores.</p>
-<h3>The Most Common Speed Killers on Landscaping Websites</h3>
-<ul>
-<li><strong>Uncompressed images:</strong> A portfolio of 20 photos at 4MB each means 80MB of images on one page. Every photo should be under 150KB for web.</li>
-<li><strong>Heavy WordPress themes:</strong> Overbuilt themes with 50+ loaded scripts for features you don't use</li>
-<li><strong>Cheap hosting:</strong> Shared hosting on the lowest tier introduces 500ms+ of server response time before anything loads</li>
-<li><strong>Too many plugins:</strong> Every plugin adds load time. Audit and remove anything unnecessary.</li>
-</ul>
-<p>Check your site at Google's PageSpeed Insights (free). Aim for 80+ on mobile. Below 50 is hurting your SEO and your conversion rate.</p>
-</section>
-<section id="seo-built-in">
-<h2>SEO Built In From Day One</h2>
-<p>The worst time to think about SEO is after your website is built. Retrofitting SEO onto a site that wasn't designed for it is expensive and often incomplete. Good <a href="/services/landscaping-website-design/">landscaping website design</a> has SEO architecture baked into the structure from the start.</p>
-<h3>SEO Architecture Decisions Made at Build Time</h3>
-<ul>
-<li><strong>URL structure:</strong> /services/lawn-maintenance/ beats /page?id=47 every time</li>
-<li><strong>Heading hierarchy:</strong> One H1 per page, logical H2/H3 structure</li>
-<li><strong>Internal linking:</strong> Service pages linking to each other and to the programs page</li>
-<li><strong>Schema markup:</strong> LocalBusiness, Service, Review schemas coded in from launch</li>
-<li><strong>Location pages:</strong> Architecture that makes it easy to build city/service combination pages</li>
-<li><strong>Blog/resources section:</strong> Built for content expansion from day one</li>
-</ul>
-<p>A well-structured site can be SEO-optimized incrementally over time. A poorly structured site requires rebuilding. The cost difference between doing it right at launch vs. fixing it later is significant. See our full <a href="/resources/blog/landscaping-seo-guide/">landscaping SEO guide</a> for the complete picture.</p>
-</section>
-<section id="common-mistakes">
-<h2>The 8 Most Common Landscaping Website Mistakes</h2>
-<ol>
-<li><strong>No phone number above the fold on mobile.</strong> The single most expensive mistake. Fix this first.</li>
-<li><strong>Generic stock photos.</strong> Homeowners can tell. Real photos of your real work convert dramatically better.</li>
-<li><strong>One page for all services.</strong> Every service needs its own page to rank on Google and to convert specific visitors.</li>
-<li><strong>Lead form with 10 fields.</strong> Every additional field reduces conversion rate. Name, phone, service type, message — that's enough.</li>
-<li><strong>No reviews or social proof visible.</strong> Your Google rating should be on your homepage, not buried in the "about" page.</li>
-<li><strong>Slow load times.</strong> 5+ second load time on mobile is a lead-killer and SEO penalty.</li>
-<li><strong>No blog or content strategy.</strong> A static website can only rank for so many keywords. Content compounds over time.</li>
-<li><strong>No tracking setup.</strong> If you don't know how many people visit your site, which pages they view, and where they came from — you're flying blind on marketing decisions.</li>
-</ol>
-</section>
-<section id="faq">
-<h2>Frequently Asked Questions</h2>
-<div class="article-faq">
-<div class="faq-item">
-<h3>How much does a landscaping website cost?</h3>
-<p>A quality landscaping website designed to rank and convert typically costs $3,000–$8,000 for a custom build, or $1,500–$3,000 for a well-built template. Cheap websites ($200–$500) almost always cost more in the long run through lost leads, poor SEO performance, and the eventual cost of rebuilding them properly. Our <a href="/services/landscaping-website-design/">Website Design service</a> starts at $1,500 setup and includes everything: custom design, SEO architecture, conversion optimization, and a 45-day launch guarantee.</p>
-</div>
-<div class="faq-item">
-<h3>What pages does a landscaping website need?</h3>
-<p>At minimum: Homepage, Services (with individual pages for each service), About, Contact, and a Reviews/Results page. For SEO, you also need location-specific service pages for each city you serve. A blog with high-quality content is valuable for long-term organic traffic.</p>
-</div>
-<div class="faq-item">
-<h3>Should my landscaping website have a photo gallery?</h3>
-<p>Yes, but integrated strategically — not as a standalone gallery page. Photos should appear on relevant service pages showing before/after results, alongside testimonials from those jobs. A gallery page people visit once and leave doesn't convert. Photos embedded in context sell services.</p>
-</div>
-<div class="faq-item">
-<h3>How long does it take to build a landscaping website?</h3>
-<p>A quality landscaping website takes 4–8 weeks to build properly — design, development, content, SEO setup, testing. We offer a 45-day launch guarantee so clients have a clear timeline. Faster "website builders" can launch in days, but they sacrifice the SEO architecture and conversion optimization that make a site worth having.</p>
-</div>
-</div>
-</section>
- ARTICLE CTA 
-<div class="article-cta-block">
-<div class="article-cta-inner">
-<div class="article-cta-label">Ready for a Website That Actually Works?</div>
-<h3>We've built conversion-optimized websites for 52+ landscaping companies.</h3>
-<p>Our websites launch in 45 days or less — and include everything: custom design, SEO setup, and conversion-optimized pages built to rank and turn visitors into booked jobs.</p>
-<div class="article-cta-btns">
-<a class="btn btn--lime" href="/contact/">Book a Free Strategy Call</a>
-<a class="btn btn--ghost" href="/services/landscaping-website-design/">See Our Website Design Service →</a>
-</div>
-</div>
-</div>
- RELATED ARTICLES 
-<div class="article-related">
-<h3>Related Articles</h3>
-<div class="article-related-grid">
-<a class="related-card" href="/resources/blog/landscaping-seo-guide/">
-<div class="img-ph related-card-img" data-spec="Landscaping SEO guide thumbnail"></div>
-<div class="related-card-body">
-<span class="related-card-cat">SEO</span>
-<h4>The Complete Landscaping SEO Guide for 2026: How to Rank #1 in Your Market</h4>
-</div>
-</a>
-<a class="related-card" href="/resources/blog/landscaping-google-ads-guide/">
-<div class="img-ph related-card-img" data-spec="Google Ads for landscaping thumbnail"></div>
-<div class="related-card-body">
-<span class="related-card-cat">Google Ads</span>
-<h4>How to Run Google Ads for Landscaping Companies (Without Wasting Your Budget)</h4>
-</div>
-</a>
-<a class="related-card" href="/resources/blog/google-business-profile-landscaping/">
-<div class="img-ph related-card-img" data-spec="GBP optimization for landscaping thumbnail"></div>
-<div class="related-card-body">
-<span class="related-card-cat">Local SEO</span>
-<h4>How to Optimize Your Google Business Profile for Landscaping: The Complete 2026 Guide</h4>
-</div>
-</a>
-</div>
-</div>
-<section class="related-section"><h2>Keep Reading</h2><div class="related-grid"><a class="related-card" href="/resources/blog/landscaping-seo-guide/"><div class="card-kicker">SEO Strategy</div><h3>The Complete Landscaping SEO Guide for 2026: How to Rank #1 in Your Market</h3><p>A step-by-step landscaping SEO guide for 2026, from keyword architecture and service area pages to local maps visibility and link building.</p><div class="card-meta">January 15, 2026 · 14 min read</div></a><a class="related-card" href="/resources/blog/landscaping-google-ads-guide/"><div class="card-kicker">Google Ads</div><h3>How to Run Google Ads for Landscaping Companies (Without Wasting Your Budget)</h3><p>Learn the campaign structure, keyword strategy, landing pages, and tracking setup that turn Google Ads spend into estimate requests.</p><div class="card-meta">January 28, 2026 · 12 min read</div></a><a class="related-card" href="/resources/blog/landscaping-meta-ads/"><div class="card-kicker">Meta Ads</div><h3>The 2026 Meta Ads Playbook for Landscaping Companies: When They Work and When They Don't</h3><p>See when Facebook and Instagram ads work for landscaping companies, what creative performs, and how to avoid low-intent traffic.</p><div class="card-meta">February 7, 2026 · 11 min read</div></a></div></section>
-<section class="cta-band"><h2>Want help turning this into a growth system?</h2><p>We help lawn care and landscaping companies tighten their website, SEO, ads, and automation so marketing actually produces booked jobs.</p><div class="cta-actions"><a class="btn btn--lime" href="/contact/">Schedule Strategy Call</a><a class="btn btn--ghost" href="/programs/">See Our Programs</a></div></section>
-<section class="related-section"><h2>Keep Reading</h2><div class="related-grid"><a class="related-card" href="/resources/blog/landscaping-seo-guide/"><div class="card-kicker">SEO Strategy</div><h3>The Complete Landscaping SEO Guide for 2026: How to Rank #1 in Your Market</h3><p>A step-by-step landscaping SEO guide for 2026, from keyword architecture and service area pages to local maps visibility and link building.</p><div class="card-meta">January 15, 2026 · 14 min read</div></a><a class="related-card" href="/resources/blog/landscaping-google-ads-guide/"><div class="card-kicker">Google Ads</div><h3>How to Run Google Ads for Landscaping Companies (Without Wasting Your Budget)</h3><p>Learn the campaign structure, keyword strategy, landing pages, and tracking setup that turn Google Ads spend into estimate requests.</p><div class="card-meta">January 28, 2026 · 12 min read</div></a><a class="related-card" href="/resources/blog/landscaping-meta-ads/"><div class="card-kicker">Meta Ads</div><h3>The 2026 Meta Ads Playbook for Landscaping Companies: When They Work and When They Don't</h3><p>See when Facebook and Instagram ads work for landscaping companies, what creative performs, and how to avoid low-intent traffic.</p><div class="card-meta">February 7, 2026 · 11 min read</div></a></div></section>
-<section class="cta-band"><h2>Want help turning this into a growth system?</h2><p>We help lawn care and landscaping companies tighten their website, SEO, ads, and automation so marketing actually produces booked jobs.</p><div class="cta-actions"><a class="btn btn--lime" href="/contact/">Schedule Strategy Call</a><a class="btn btn--ghost" href="/programs/">See Our Programs</a></div></section>
+  </section>
 
-        <section class="related-section"><h2>Keep Reading</h2><div class="related-grid"><a class="related-card" href="/resources/blog/landscaping-seo-guide/"><div class="card-kicker">SEO Strategy</div><h3>The Complete Landscaping SEO Guide for 2026: How to Rank #1 in Your Market</h3><p>A step-by-step landscaping SEO guide for 2026, from keyword architecture and service area pages to local maps visibility and link building.</p><div class="card-meta">January 15, 2026 · 14 min read</div></a><a class="related-card" href="/resources/blog/landscaping-google-ads-guide/"><div class="card-kicker">Google Ads</div><h3>How to Run Google Ads for Landscaping Companies (Without Wasting Your Budget)</h3><p>Learn the campaign structure, keyword strategy, landing pages, and tracking setup that turn Google Ads spend into estimate requests.</p><div class="card-meta">January 28, 2026 · 12 min read</div></a><a class="related-card" href="/resources/blog/landscaping-meta-ads/"><div class="card-kicker">Meta Ads</div><h3>The 2026 Meta Ads Playbook for Landscaping Companies: When They Work and When They Don't</h3><p>See when Facebook and Instagram ads work for landscaping companies, what creative performs, and how to avoid low-intent traffic.</p><div class="card-meta">February 7, 2026 · 11 min read</div></a></div></section>
-        <section class="cta-band"><h2>Want help turning this into a growth system?</h2><p>We help lawn care and landscaping companies tighten their website, SEO, ads, and automation so marketing actually produces booked jobs.</p><div class="cta-actions"><a href="/contact/" class="btn btn--lime">Schedule Strategy Call</a><a href="/programs/" class="btn btn--ghost">See Our Programs</a></div></section>
-      </article>
+  <!-- PAGE BODY (content to be added) -->
+  <section style="padding: 80px 0;">
+    <div style="max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px;">
+      <!-- Content coming soon -->
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- FOOTER (canonical — matches homepage) -->
 <footer class="footer-v2">
     <div class="fv2-glow"></div>
     <div class="fv2-inner">
@@ -663,38 +586,5 @@
   </footer>
 
   <script src="/assets/js/main.js?v=49"></script>
-  <script>
-  // Reliable mega menu hover behavior
-  document.addEventListener('DOMContentLoaded', function() {
-    const megaItems = document.querySelectorAll('.nav-mega');
-    
-    megaItems.forEach(item => {
-      const panel = item.querySelector('.mega-panel');
-      let hideTimeout;
-      
-      // Show on hover over trigger
-      item.addEventListener('mouseenter', () => {
-        clearTimeout(hideTimeout);
-        item.classList.add('show');
-      });
-      
-      // Keep open when hovering panel
-      panel?.addEventListener('mouseenter', () => {
-        clearTimeout(hideTimeout);
-        item.classList.add('show');
-      });
-      
-      // Hide with delay when leaving both trigger and panel
-      const hideWithDelay = () => {
-        hideTimeout = setTimeout(() => {
-          item.classList.remove('show');
-        }, 100);
-      };
-      
-      item.addEventListener('mouseleave', hideWithDelay);
-      panel?.addEventListener('mouseleave', hideWithDelay);
-    });
-  });
-  </script>
 </body>
 </html>
