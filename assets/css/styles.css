@@ -1441,6 +1441,9 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
     background: rgba(255,255,255,0.025);
     border: 1px solid rgba(255,255,255,0.05);
   }
+  .mega-item-text {
+    flex: 1;
+  }
   .mega-item + .mega-item { margin-top: 8px; }
   .mega-item:hover,
   .mega-item:focus-visible {
