@@ -2041,3 +2041,53 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   .pricing-grid { grid-template-columns: 1fr; }
   .compare-header, .compare-row { grid-template-columns: 1fr 100px 120px; }
 }
+
+/* ─ FOOTER: Trust Bar ─ */
+.fv2-trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-top: 8px;
+}
+.fv2-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.02em;
+}
+.fv2-trust-item svg { flex-shrink: 0; }
+
+/* ─ FOOTER: Social Icons ─ */
+.fv2-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.fv2-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.6);
+  transition: background 0.2s, color 0.2s;
+}
+.fv2-social a:hover {
+  background: var(--lime);
+  color: #07100A;
+}
+
+@media (max-width: 720px) {
+  .fv2-trust-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
