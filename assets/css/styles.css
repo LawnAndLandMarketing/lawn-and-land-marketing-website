@@ -2091,3 +2091,115 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
     align-items: center;
   }
 }
+
+/* ═══════════════════════════════════════════════
+   REUSABLE SECTION COMPONENTS
+   Use these across all pages for consistent layout
+   ═══════════════════════════════════════════════ */
+
+/* ─ Content Section ─ */
+.content-section {
+  padding: 80px 0;
+  position: relative;
+}
+.content-section--alt {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ─ Container Variants ─ */
+.container--narrow {
+  max-width: 780px;
+  text-align: center;
+}
+
+/* ─ Section Label (pill/eyebrow) ─ */
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 16px;
+}
+
+/* ─ Section Heading ─ */
+.section-heading {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.15;
+  color: var(--white);
+  margin: 0 0 20px;
+}
+
+/* ─ Section Text ─ */
+.section-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+  margin: 0 0 16px;
+  max-width: 640px;
+}
+.section-text:last-of-type { margin-bottom: 0; }
+.section-text--muted {
+  font-size: 15px;
+  color: rgba(255,255,255,0.55);
+}
+.section-text strong {
+  color: var(--lime);
+  font-weight: 700;
+}
+.container--narrow .section-text {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─ Section Actions ─ */
+.section-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ─ Split Block (content + media side by side) ─ */
+.split-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.split-block--reversed .split-block__content { order: 2; }
+.split-block--reversed .split-block__media { order: 1; }
+
+/* ─ Media Placeholder ─ */
+.media-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px dashed rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.25);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+/* ─ Mobile: Sections ─ */
+@media (max-width: 720px) {
+  .content-section { padding: 48px 0; }
+  .split-block {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .split-block--reversed .split-block__content { order: 1; }
+  .split-block--reversed .split-block__media { order: 2; }
+  .section-actions { flex-direction: column; }
+  .section-actions .btn { width: 100%; justify-content: center; }
+}
