@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}} | Lawn & Land Marketing</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://new.lawnlab.dev/{{PAGE_PATH}}">
+  <meta property="og:title" content="{{PAGE_TITLE}} | Lawn & Land Marketing">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/logo-badge.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,600;1,700;1,800&family=Mulish:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=38">
+  <style>
+    .simple-hero {
+      position: relative;
+      padding: 40px 0 34px;
+      min-height: 560px;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(180deg, rgba(4,12,7,0.35) 0%, rgba(4,12,7,0.78) 46%, rgba(4,12,7,0.96) 100%),
+        linear-gradient(110deg, rgba(4,12,7,0.90) 0%, rgba(4,12,7,0.64) 46%, rgba(4,12,7,0.82) 100%),
+        var(--hero-image) center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .simple-hero::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0;
+      height: 140px;
+      background: linear-gradient(180deg, transparent, rgba(7,16,10,0.95));
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .hero-copy { max-width: 760px; }
+    .hero-copy h1 {
+      font-family: var(--font-h);
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 0.96;
+      font-weight: 800;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+    .hero-copy p {
+      max-width: 60ch;
+      font-size: 18px;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 24px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; }
+    .btn svg { flex-shrink: 0; }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      font-family: var(--font-l);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.74);
+    }
+    .hero-kicker::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 18px rgba(172,231,29,0.8);
+    }
+    @media(max-width:768px) {
+      .simple-hero { min-height: auto; padding: 56px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="/get-started/book-strategy-call/" class="topbar-link">
+      🌱 Free strategy call available — book now to discuss your growth →
+    </a>
+  </div>
+</div>
+
+<!-- NAV with MEGA MENU (CANONICAL — matches homepage exactly) -->
+{{NAV_BLOCK}}
+
+<!-- HERO BANNER -->
+<section class="simple-hero" style="--hero-image: url('/assets/images/programs-hero.jpg');">
+  <div class="hero-inner">
+    <div class="hero-copy" data-reveal="fade-up">
+      <div class="crumbs">{{BREADCRUMBS}}</div>
+      <div class="hero-kicker">{{KICKER}}</div>
+      <h1>{{H1}}</h1>
+      <p>{{SUBTEXT}}</p>
+      <div class="hero-actions">
+        <a href="/contact/" class="btn btn--lime">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Schedule Strategy Call
+        </a>
+        <a href="/contact/" class="btn btn--ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE BODY (placeholder for future content) -->
+<section style="padding: 80px 0;">
+  <div style="max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px;">
+    <!-- Content will be added page by page -->
+  </div>
+</section>
+
+<!-- FOOTER (CANONICAL — matches homepage exactly) -->
+{{FOOTER_BLOCK}}
+
+<script src="/assets/js/main.js?v=49"></script>
+</body>
+</html>
