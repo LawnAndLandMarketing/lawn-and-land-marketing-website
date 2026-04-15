@@ -18,6 +18,11 @@
 - `resources/contact/index.html` and `resources/guides/index.html` were deleted from the repo.
 - Next work should shift from route hygiene to finishing the highest-leverage thin pages.
 
+## 2026-04-15 (continued)
+- A second route-hygiene pass removed the remaining broken internal links to orphan routes like `/team/`, `/results/`, `/good-fit/`, `/book/`, and old article URLs.
+- Top-priority thin pages were deepened in this workstream: `/programs/`, `/marketing-services/`, `/about/`, and `/contact/`.
+- The next highest-leverage page work should move deeper into service detail pages rather than reopening top-level architecture decisions.
+
 ## Open Decisions To Track Later
 - Whether any retired routes should be redirected intentionally versus simply removed from internal linking.
 - Exact completion order of service pages after top-level architecture cleanup is done.

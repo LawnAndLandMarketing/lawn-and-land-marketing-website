@@ -1,6 +1,6 @@
 # Build Status
 
-Last updated after repo cleanup pass on 2026-04-15.
+Last updated after route-hygiene pass + key-page deepening on 2026-04-15.
 
 ## Overall Read
 This build has real momentum.
@@ -15,9 +15,9 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 - The company source-of-truth messaging is already visible on the homepage in meaningful ways.
 
 ## What Is Not Done Yet
-- Many live pages are shell pages rather than persuasive, high-authority destination pages.
-- Several older secondary links still point to routes that do not currently exist in the repo, including pages such as `/results/`, `/team/`, and a few older article URLs.
-- The next meaningful gain is page depth, not more structural debate.
+- Many secondary pages are still shell pages rather than persuasive, high-authority destination pages.
+- The top-level architecture is cleaner now; the next meaningful gains are deeper service pages, industry pages, proof pages, and resource strategy.
+- The current priority pages are no longer just placeholders, but they can still be sharpened further with proof, visuals, and richer specificity.
 
 ## Status By Section
 
@@ -27,24 +27,24 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 - Notes: strong hero, proof, program framing, differentiation, and FAQs already in place
 
 ### About
-- Status: live but thin
-- Quality read: scaffolded
-- Notes: good framing, needs real body depth and company story development
+- Status: materially improved
+- Quality read: developed
+- Notes: now has real body depth around story, specialization, values, and fit; can still improve with stronger proof and visuals later
 
 ### Contact
-- Status: live but thin
-- Quality read: scaffolded
-- Notes: route is correct; page needs more intentional conversion architecture
+- Status: materially improved
+- Quality read: developed
+- Notes: now has stronger expectation-setting, fit guidance, and clearer conversion flow; can still improve with embedded scheduling UX and proof
 
 ### Programs
-- Status: live, mixed maturity
-- Quality read: hub is scaffolded; child pages appear more developed
-- Notes: programs hub still contains placeholder signals and needs stronger decision-support content
+- Status: live, stronger maturity
+- Quality read: developed
+- Notes: hub now has clearer comparison, expectation-setting, and decision-support structure; child pages still need final QA against current positioning
 
 ### Marketing Services
-- Status: live, thin
-- Quality read: hub + child pages are scaffolded overall
-- Notes: canonical route family is now aligned in the repo; content depth is still missing
+- Status: live, materially improved
+- Quality read: developed at the hub level; child pages still scaffolded overall
+- Notes: hub now explains service sequencing, fit, and the integrated system more clearly; top child pages still need deeper bodies
 
 ### Industries
 - Status: live, thin
@@ -63,14 +63,19 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 4. Cleaned the 404 page so it no longer promotes the stale service/contact/guides routes.
 5. Added a repo-native website source-of-truth docs layer for continuity.
 
-## Highest-Priority Pages To Deepen After Cleanup
-1. `/programs/`
-2. `/marketing-services/`
-3. `/about/`
-4. `/contact/`
-5. `/marketing-services/website-design/`
-6. `/marketing-services/local-seo/`
-7. `/marketing-services/google-ads/`
+## Latest Progress
+1. Remaining stale internal links to dead routes were cleaned.
+2. `/programs/` was expanded with stronger program comparison and fit guidance.
+3. `/marketing-services/` was expanded into a real service-hub page.
+4. `/about/` was expanded with company story, values, and positioning.
+5. `/contact/` was expanded with better conversion architecture and expectation-setting.
+
+## Highest-Priority Pages To Deepen Next
+1. `/marketing-services/website-design/`
+2. `/marketing-services/local-seo/`
+3. `/marketing-services/google-ads/`
+4. strongest-fit industry pages
+5. proof-heavy resources / review pages
 
 ## Recommended Working Order
 Phase 1 — architecture alignment
