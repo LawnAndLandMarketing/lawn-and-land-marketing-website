@@ -20,6 +20,7 @@ Core files
 - `build-status.md` — current progress and highest-priority next work
 - `decisions.md` — durable website decisions log
 - `benchmark-lawnline.md` — benchmark notes on Lawnline
+- `restart-guide.md` — shortest path to regain context and resume work quickly
 
 Status definitions
 - `developed` — page has meaningful body content and feels intentionally built
@@ -34,3 +35,8 @@ Operating rules
 3. If a page is killed, remove it from nav, footer, CTAs, sitemap references, and internal links.
 4. When a page meaningfully changes, update `page-registry.md` and `build-status.md` in the same workstream.
 5. Keep this website folder focused on the public site only; do not mix in internal ops naming.
+
+Current restart-critical convention
+- Homepage is currently the only intentionally developed public page.
+- Non-home public pages are intentionally held as header + hero + blank-body placeholder + CTA/footer until the design phase is approved.
+- If you restart the project later, treat that convention as truth unless Matt explicitly changes it.

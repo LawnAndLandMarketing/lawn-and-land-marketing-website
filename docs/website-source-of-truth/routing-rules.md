@@ -35,5 +35,9 @@ These are legacy or non-canonical and should be removed from internal linking or
 - 404 page has been cleaned so it no longer promotes the retired service/contact/guides routes.
 
 ## Remaining Link QA To Handle Later
-- Review older secondary links to non-canonical or missing pages such as `/results/`, `/team/`, and a few legacy blog/article routes.
 - Decide whether any retired routes should eventually receive redirects at the hosting layer.
+- If a route is intentionally reintroduced later, record that decision before adding it back into internal linking.
+
+## Current Non-Home Page Convention
+- Homepage is the only intentionally developed public page right now.
+- Non-home pages should keep header + hero + blank-body placeholder + CTA/footer until the design phase is approved.

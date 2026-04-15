@@ -74,20 +74,18 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 3. then deepen page bodies only after design direction is locked
 
 ## Recommended Working Order
-Phase 1 — architecture alignment
-- Fix nav/footer/CTA routing drift
-- Remove killed routes from internal discoverability
+Phase 1 — preserve current truth
+- keep homepage as the only developed public page
+- keep non-home pages in blank-body shell state
+- keep canonical route hygiene intact
 
-Phase 2 — finish primary conversion pages
-- programs hub
-- marketing services hub
-- about
-- contact
+Phase 2 — design system work
+- define the shared non-home page body system
+- choose the first page template to fully design
 
-Phase 3 — deepen authority pages
-- top service pages
-- top industry pages
-- blog/resource strategy pages
+Phase 3 — deliberate expansion
+- apply the approved design pattern to selected pages
+- only then deepen body content where needed
 
 ## Success Criteria For “Finished” Pages
 A page should not be treated as finished just because it is live.

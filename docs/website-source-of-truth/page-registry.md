@@ -13,10 +13,10 @@ Status key
 | Core | Home | `/` | yes | developed | Strongest page on the site so far; real strategic content and proof sections are present. |
 | Core | About | `/about/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Core | Contact | `/contact/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
-| Core | Get Started | `/get-started/book-strategy-call/` | yes | developed | Existing conversion page; should remain a strong CTA destination. |
+| Core | Get Started | `/get-started/book-strategy-call/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Programs | Programs hub | `/programs/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
-| Programs | Growth | `/programs/growth/` | yes | developed | Live and materially built; still needs final QA against current messaging. |
-| Programs | Authority | `/programs/authority/` | yes | developed | Live and materially built; still needs final QA against current messaging. |
+| Programs | Growth | `/programs/growth/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
+| Programs | Authority | `/programs/authority/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Marketing Services | Services hub | `/marketing-services/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Marketing Services | Website Design | `/marketing-services/website-design/` | yes | scaffolded | Correct route and H1; needs substantive body content. |
 | Marketing Services | Local SEO | `/marketing-services/local-seo/` | yes | scaffolded | Live shell. |

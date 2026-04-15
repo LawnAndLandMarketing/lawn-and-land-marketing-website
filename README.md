@@ -1,40 +1,121 @@
 # Lawn & Land Marketing Website
 
-**Live site:** https://new.lawnlab.dev  
-**Vercel project:** new-lawnlab-deploy  
-**Auto-deploys:** Push to `main` → live in ~10 seconds
+Live site: https://new.lawnlab.dev
+Vercel project: new-lawnlab-deploy
+Auto-deploy: push to `main` -> GitHub Actions -> Vercel production
 
-## How to Make Changes
+## What this repo is
 
-1. Clone: `git clone https://github.com/LawnAndLandMarketing/lawn-and-land-marketing-website.git`
-2. Edit any file (HTML, CSS, JS, images)
-3. Commit and push to `main`
-4. Site updates automatically via GitHub Actions → Vercel
+This repo is the source of truth for the public Lawn & Land website.
 
-## Structure
+Important: this website project is separate from any internal Ground Control concept or naming.
 
-```
-├── index.html              ← Homepage
+## Current state at a glance
+
+The homepage is the only intentionally developed public page right now.
+
+All other public pages are intentionally being held in this temporary structure:
+- header
+- hero banner
+- blank body placeholder
+- CTA
+- footer
+
+The placeholder copy currently used on non-home pages is:
+- [Blank body — we will design this shortly.]
+
+This is intentional.
+Do not start re-writing page bodies unless the design phase has been explicitly restarted.
+
+## Canonical route rules
+
+Use these routes as truth:
+- `/marketing-services/` = canonical services hub
+- `/contact/` = canonical contact route
+- `/programs/...` = canonical program routes
+- `/industries/...` = canonical industry routes
+- `/resources/...` = canonical resource routes
+- `/get-started/book-strategy-call/` = canonical primary CTA destination
+
+Retired / non-canonical routes:
+- `/services/`
+- `/pricing/`
+- `/resources/guides/`
+- `/resources/contact/`
+- older orphan routes like `/team/`, `/results/`, `/good-fit/`, `/book/`, and older article URLs should stay out of internal linking unless intentionally brought back
+
+## What was already cleaned up
+
+Structural cleanup already completed in this repo:
+- `/services/` internal references replaced with `/marketing-services/`
+- `/resources/contact/` internal references replaced with `/contact/`
+- `/resources/guides/` removed from internal structure
+- stale internal orphan links cleaned out of the internal link graph
+- `resources/contact/index.html` deleted
+- `resources/guides/index.html` deleted
+- nav / footer / 404 / duplicated HTML were cleaned for route hygiene
+
+## Where to restart quickly
+
+Start here, in order:
+1. `docs/website-source-of-truth/README.md`
+2. `docs/website-source-of-truth/build-status.md`
+3. `docs/website-source-of-truth/decisions.md`
+4. `docs/website-source-of-truth/page-registry.md`
+5. `docs/website-source-of-truth/restart-guide.md`
+
+Those docs are the fastest way to recover context.
+
+## Repo structure
+
+```text
+├── index.html                          # Homepage (only intentionally developed page right now)
+├── about/
+├── contact/
+├── get-started/book-strategy-call/
+├── programs/
+├── marketing-services/
+├── industries/
+├── resources/
 ├── assets/
-│   ├── css/styles.css      ← Main stylesheet
-│   ├── js/main.js          ← Main JavaScript
-│   ├── images/             ← All images
-│   └── logos/              ← SVG logos
-├── about/                  ← About page
-├── contact/                ← Contact page
-├── programs/               ← Growth & Authority program pages
-├── services/               ← Individual service pages
-├── industries/             ← Industry-specific pages
-├── case-studies/           ← Client case studies
-├── resources/              ← Blog, guides, podcast
-├── book/                   ← Mow Money book page
-└── .github/workflows/      ← Auto-deploy config
+│   ├── css/styles.css
+│   ├── js/main.js
+│   ├── images/
+│   └── logos/
+├── docs/website-source-of-truth/
+└── .github/workflows/deploy.yml
 ```
 
-## Rules
+## Working rules
 
-- **This repo is the single source of truth.** Never deploy via Vercel CLI directly.
-- **Every change goes through git.** No exceptions.
-- **Push to main = live.** There is no staging branch (yet).
-- **Images go in `assets/images/`.** Logos in `assets/logos/`.
-- **One CSS file:** `assets/css/styles.css` (plus page-specific CSS files).
+- This repo is the website source of truth.
+- Every change should go through git.
+- Push to `main` deploys production.
+- Do not deploy directly with Vercel CLI as the normal workflow.
+- Do not reintroduce retired routes unless there is an explicit new decision.
+- Do not deepen non-home page bodies until design direction is approved.
+- If restarting later, update the docs in `docs/website-source-of-truth/` in the same workstream as any structural decision.
+
+## Recommended next phase
+
+The next phase is design, not copy.
+
+Best restart path:
+1. define the shared non-home page body system
+2. pick the first page template to fully design
+3. apply that system page-by-page
+4. only then deepen body content where needed
+
+## Deployment
+
+GitHub Actions workflow:
+- `.github/workflows/deploy.yml`
+- pushes to `main` trigger Vercel production deploy
+
+## Maintainer note for future restart
+
+If you come back cold later, assume this:
+- homepage = live developed benchmark page
+- everything else = intentionally held shell
+- route hygiene work is already done
+- the decision that matters most is preserving the blank-body convention until design begins
