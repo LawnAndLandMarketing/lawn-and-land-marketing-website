@@ -1,6 +1,6 @@
 # Build Status
 
-Last updated after route-hygiene pass + key-page deepening on 2026-04-15.
+Last updated after blank-body reset on 2026-04-15.
 
 ## Overall Read
 This build has real momentum.
@@ -15,9 +15,9 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 - The company source-of-truth messaging is already visible on the homepage in meaningful ways.
 
 ## What Is Not Done Yet
-- Many secondary pages are still shell pages rather than persuasive, high-authority destination pages.
-- The top-level architecture is cleaner now; the next meaningful gains are deeper service pages, industry pages, proof pages, and resource strategy.
-- The current priority pages are no longer just placeholders, but they can still be sharpened further with proof, visuals, and richer specificity.
+- Homepage is still the only materially developed page by design.
+- Non-home pages are intentionally being held in a blank-body state until the final page design direction is approved.
+- The next meaningful gain is page-design work, not more written body content.
 
 ## Status By Section
 
@@ -27,24 +27,24 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 - Notes: strong hero, proof, program framing, differentiation, and FAQs already in place
 
 ### About
-- Status: materially improved
-- Quality read: developed
-- Notes: now has real body depth around story, specialization, values, and fit; can still improve with stronger proof and visuals later
+- Status: intentionally held
+- Quality read: scaffolded
+- Notes: page is intentionally reset to header + hero + blank body + CTA/footer until design phase
 
 ### Contact
-- Status: materially improved
-- Quality read: developed
-- Notes: now has stronger expectation-setting, fit guidance, and clearer conversion flow; can still improve with embedded scheduling UX and proof
+- Status: intentionally held
+- Quality read: scaffolded
+- Notes: page is intentionally reset to header + hero + blank body + CTA/footer until design phase
 
 ### Programs
-- Status: live, stronger maturity
-- Quality read: developed
-- Notes: hub now has clearer comparison, expectation-setting, and decision-support structure; child pages still need final QA against current positioning
+- Status: intentionally held
+- Quality read: scaffolded
+- Notes: page is intentionally reset to header + hero + blank body + CTA/footer until design phase
 
 ### Marketing Services
-- Status: live, materially improved
-- Quality read: developed at the hub level; child pages still scaffolded overall
-- Notes: hub now explains service sequencing, fit, and the integrated system more clearly; top child pages still need deeper bodies
+- Status: intentionally held
+- Quality read: scaffolded
+- Notes: page is intentionally reset to header + hero + blank body + CTA/footer until design phase
 
 ### Industries
 - Status: live, thin
@@ -65,17 +65,13 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 
 ## Latest Progress
 1. Remaining stale internal links to dead routes were cleaned.
-2. `/programs/` was expanded with stronger program comparison and fit guidance.
-3. `/marketing-services/` was expanded into a real service-hub page.
-4. `/about/` was expanded with company story, values, and positioning.
-5. `/contact/` was expanded with better conversion architecture and expectation-setting.
+2. All non-home pages were reset to the approved temporary structure: header + hero + blank-body placeholder + CTA/footer.
+3. Homepage remains the only intentionally developed page right now.
 
-## Highest-Priority Pages To Deepen Next
-1. `/marketing-services/website-design/`
-2. `/marketing-services/local-seo/`
-3. `/marketing-services/google-ads/`
-4. strongest-fit industry pages
-5. proof-heavy resources / review pages
+## Highest-Priority Work Next
+1. design the blank body system for non-home pages
+2. decide the first page templates to fully design
+3. then deepen page bodies only after design direction is locked
 
 ## Recommended Working Order
 Phase 1 — architecture alignment

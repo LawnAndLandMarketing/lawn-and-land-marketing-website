@@ -11,13 +11,13 @@ Status key
 | Section | Page | Route | Live? | Status | Notes |
 |---|---|---:|---|---|---|
 | Core | Home | `/` | yes | developed | Strongest page on the site so far; real strategic content and proof sections are present. |
-| Core | About | `/about/` | yes | developed | Expanded with stronger company story, specialization, values, and fit framing. |
-| Core | Contact | `/contact/` | yes | developed | Expanded with clearer conversion architecture, fit guidance, and expectation-setting. |
+| Core | About | `/about/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
+| Core | Contact | `/contact/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Core | Get Started | `/get-started/book-strategy-call/` | yes | developed | Existing conversion page; should remain a strong CTA destination. |
-| Programs | Programs hub | `/programs/` | yes | developed | Expanded with stronger comparison, expectation-setting, and decision-support content. |
+| Programs | Programs hub | `/programs/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Programs | Growth | `/programs/growth/` | yes | developed | Live and materially built; still needs final QA against current messaging. |
 | Programs | Authority | `/programs/authority/` | yes | developed | Live and materially built; still needs final QA against current messaging. |
-| Marketing Services | Services hub | `/marketing-services/` | yes | developed | Expanded into a real hub page with service sequencing, fit guidance, and integrated-system framing. |
+| Marketing Services | Services hub | `/marketing-services/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Marketing Services | Website Design | `/marketing-services/website-design/` | yes | scaffolded | Correct route and H1; needs substantive body content. |
 | Marketing Services | Local SEO | `/marketing-services/local-seo/` | yes | scaffolded | Live shell. |
 | Marketing Services | GBP Management | `/marketing-services/gbp-management/` | yes | scaffolded | Live shell. |
@@ -51,10 +51,10 @@ Status key
 | legacy | `/services/...` child routes | Internal uses replaced with `/marketing-services/...` equivalents | Keep retired and redirect later only if needed |
 | legacy | older orphan routes like `/team/`, `/results/`, `/good-fit/`, `/book/`, old article URLs | Internal uses removed or replaced in the route-hygiene pass | Keep out of the internal link graph unless intentionally reintroduced |
 
-## Highest-Leverage Pages To Finish Next
-1. core service detail pages starting with `/marketing-services/website-design/`, `/marketing-services/local-seo/`, `/marketing-services/google-ads/`
-2. strongest-fit industry pages
-3. proof-heavy resource pages
+## Highest-Leverage Work Next
+1. design the shared blank-body page system for non-home pages
+2. choose which page template gets designed first
+3. deepen page bodies only after design direction is approved
 
 ## Audit Notes
 - The live homepage is ahead of the rest of the site.

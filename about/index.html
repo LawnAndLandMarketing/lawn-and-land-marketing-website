@@ -225,33 +225,6 @@
       .btn { width: 100%; }
     }
   </style>
-  <style>
-    .page-section { padding: 84px 0; }
-    .page-section + .page-section { padding-top: 0; }
-    .page-wrap { max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px; }
-    .page-intro { max-width: 760px; margin-bottom: 28px; }
-    .page-eyebrow { display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--lime); }
-    .page-title { font-family: var(--font-h); font-size: clamp(30px, 4vw, 46px); line-height: 1.04; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 16px; }
-    .page-copy, .page-card p, .page-step p, .page-note, .page-list li { color: var(--body); }
-    .page-grid, .page-step-grid { display: grid; gap: 24px; }
-    .page-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .page-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .page-card, .page-step, .page-band { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; }
-    .page-card, .page-step { padding: 28px; }
-    .page-card h3, .page-step h3, .page-band h2 { font-family: var(--font-h); color: var(--white); font-size: clamp(24px, 3vw, 34px); line-height: 1.08; font-style: italic; font-weight: 800; margin-bottom: 12px; }
-    .page-kicker { display: inline-flex; margin-bottom: 14px; padding: 8px 12px; border-radius: 999px; background: rgba(172,231,29,0.10); color: var(--lime); font-family: var(--font-l); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    .page-list { display: grid; gap: 12px; margin-top: 18px; }
-    .page-list li { display: flex; gap: 12px; }
-    .page-list li::before { content: '✓'; color: var(--lime); font-weight: 700; flex: 0 0 auto; }
-    .page-step-number { display: inline-flex; width: 38px; height: 38px; border-radius: 999px; align-items: center; justify-content: center; margin-bottom: 16px; background: rgba(172,231,29,0.12); color: var(--lime); font-family: var(--font-h); font-weight: 800; }
-    .page-band { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,0.85fr); gap: 24px; align-items: center; padding: 34px; position: relative; overflow: hidden; }
-    .page-band::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(172,231,29,0.08), transparent 52%, rgba(93,202,73,0.08)); pointer-events: none; }
-    .page-band > div { position: relative; z-index: 1; }
-    .page-band-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-    .page-note { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,0.6); }
-    @media (max-width: 1024px) { .page-grid, .page-grid--three, .page-step-grid, .page-band { grid-template-columns: 1fr; } }
-    @media (max-width: 720px) { .page-card, .page-step, .page-band { padding: 24px; } .page-band-actions { flex-direction: column; } .page-band-actions .btn { width: 100%; } }
-  </style>
 </head>
 <body>
 
@@ -531,98 +504,17 @@
       </div>
     </div>
   </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-intro">
-        <span class="page-eyebrow">Why We Exist</span>
-        <h2 class="page-title">Lawn &amp; Land was built to be the growth partner green-industry owners could not find anywhere else.</h2>
-        <p class="page-copy">Most agencies try to be good enough for everyone. That usually means they understand nobody deeply. We chose the opposite path: one industry, one customer, one standard for what growth should look like.</p>
-      </div>
-      <div class="page-grid">
-        <div class="page-card">
-          <span class="page-kicker">The Problem</span>
-          <h3>Great operators were getting sold generic marketing.</h3>
-          <p>Lawn and landscape companies often get stuck with websites that look fine but do not convert, SEO that lacks local service depth, ads that are under-managed, and follow-up systems that leak revenue every week.</p>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Our Answer</span>
-          <h3>Build the whole thing around how green-industry companies actually grow.</h3>
-          <p>That means better positioning, cleaner lead flow, stronger local authority, tighter operations between marketing and sales, and a partner who understands seasonality, service areas, and owner bandwidth.</p>
-        </div>
+  <section style="padding: 80px 0;">
+    <div style="max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px;">
+      <div style="border: 1px dashed rgba(172,231,29,0.28); border-radius: 24px; padding: 48px 28px; background: rgba(255,255,255,0.02); text-align: center;">
+        <span style="display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime);">Body Section</span>
+        <h2 style="font-family: var(--font-h); font-size: clamp(28px, 4vw, 42px); line-height: 1.05; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 14px;">[Blank body — we will design this shortly.]</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--body);">This page intentionally keeps only the header, hero, placeholder body, CTA, and footer until the final page design is ready.</p>
       </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-intro">
-        <span class="page-eyebrow">What Makes Us Different</span>
-        <h2 class="page-title">Specialization is not a slogan here. It is the operating model.</h2>
-      </div>
-      <div class="page-grid page-grid--three">
-        <div class="page-card"><span class="page-kicker">Green-Industry Only</span><h3>We stay in one lane on purpose.</h3><p>Every strategy decision gets better when the team already understands your services, sales cycle, reviews, local search behavior, and growth constraints.</p></div>
-        <div class="page-card"><span class="page-kicker">Partner, Not Vendor</span><h3>We are here to help you win, not just ship tasks.</h3><p>The work is more effective when there is honest communication, shared standards, and real accountability on both sides.</p></div>
-        <div class="page-card"><span class="page-kicker">Foundation Before Hype</span><h3>We build durable momentum first.</h3><p>Website and GBP SEO create the long-term base. Ads help accelerate the right companies once the fundamentals can support them.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-grid">
-        <div class="page-card">
-          <span class="page-kicker">Core Values</span>
-          <h3>How we show up.</h3>
-          <ul class="page-list">
-            <li>Be The Energy — bring real momentum to the team, the client, and the work.</li>
-            <li>Courageous Communication — talk honestly, directly, and as equals.</li>
-            <li>Lead With Solutions — bring options, not just problems.</li>
-            <li>Own Your Role — be proactive, competent, and accountable.</li>
-            <li>Grow Or Die — keep learning because standing still is not an option.</li>
-          </ul>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">What Partnership Feels Like</span>
-          <h3>Clear, confident, and transparent.</h3>
-          <p>We do not posture. We do not hide behind jargon. We tell clients what is working, what is not, what needs to happen next, and where they are unintentionally limiting results.</p>
-          <ul class="page-list">
-            <li>Honest recommendations instead of padded scopes</li>
-            <li>Expectation-setting around timelines and momentum</li>
-            <li>Clear standards for follow-up, reviews, and responsiveness</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-band">
-        <div>
-          <span class="page-eyebrow">Who We Work Best With</span>
-          <h2>Our best clients trust the process, invest in growth, and want a real partner.</h2>
-          <p class="page-copy">The companies that win with us are usually coachable, growth-minded, and committed to answering leads well. They understand that momentum takes time and that strong marketing still needs strong operations behind it.</p>
-          <div class="page-band-actions">
-            <a href="/programs/" class="btn btn--lime">See Our Programs</a>
-            <a href="/get-started/book-strategy-call/" class="btn btn--ghost">Talk With Our Team</a>
-          </div>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Common Result Killers</span>
-          <ul class="page-list">
-            <li>Missed calls and slow follow-up</li>
-            <li>Weak review generation</li>
-            <li>Underfunded ad budgets in competitive markets</li>
-            <li>Distrust, overanalysis, and micromanaging</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER (canonical — matches homepage) -->
-  <footer class="footer-v2">
+<footer class="footer-v2">
     <div class="fv2-glow"></div>
     <div class="fv2-inner">
 

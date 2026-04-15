@@ -225,33 +225,6 @@
       .btn { width: 100%; }
     }
   </style>
-  <style>
-    .page-section { padding: 84px 0; }
-    .page-section + .page-section { padding-top: 0; }
-    .page-wrap { max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px; }
-    .page-intro { max-width: 760px; margin-bottom: 28px; }
-    .page-eyebrow { display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--lime); }
-    .page-title { font-family: var(--font-h); font-size: clamp(30px, 4vw, 46px); line-height: 1.04; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 16px; }
-    .page-copy, .page-card p, .page-step p, .page-note, .page-list li { color: var(--body); }
-    .page-grid, .page-step-grid { display: grid; gap: 24px; }
-    .page-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .page-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .page-card, .page-step, .page-band { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; }
-    .page-card, .page-step { padding: 28px; }
-    .page-card h3, .page-step h3, .page-band h2 { font-family: var(--font-h); color: var(--white); font-size: clamp(24px, 3vw, 34px); line-height: 1.08; font-style: italic; font-weight: 800; margin-bottom: 12px; }
-    .page-kicker { display: inline-flex; margin-bottom: 14px; padding: 8px 12px; border-radius: 999px; background: rgba(172,231,29,0.10); color: var(--lime); font-family: var(--font-l); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    .page-list { display: grid; gap: 12px; margin-top: 18px; }
-    .page-list li { display: flex; gap: 12px; }
-    .page-list li::before { content: '✓'; color: var(--lime); font-weight: 700; flex: 0 0 auto; }
-    .page-step-number { display: inline-flex; width: 38px; height: 38px; border-radius: 999px; align-items: center; justify-content: center; margin-bottom: 16px; background: rgba(172,231,29,0.12); color: var(--lime); font-family: var(--font-h); font-weight: 800; }
-    .page-band { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,0.85fr); gap: 24px; align-items: center; padding: 34px; position: relative; overflow: hidden; }
-    .page-band::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(172,231,29,0.08), transparent 52%, rgba(93,202,73,0.08)); pointer-events: none; }
-    .page-band > div { position: relative; z-index: 1; }
-    .page-band-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-    .page-note { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,0.6); }
-    @media (max-width: 1024px) { .page-grid, .page-grid--three, .page-step-grid, .page-band { grid-template-columns: 1fr; } }
-    @media (max-width: 720px) { .page-card, .page-step, .page-band { padding: 24px; } .page-band-actions { flex-direction: column; } .page-band-actions .btn { width: 100%; } }
-  </style>
 </head>
 <body>
 
@@ -531,94 +504,17 @@
       </div>
     </div>
   </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-intro">
-        <span class="page-eyebrow">How We Build Growth</span>
-        <h2 class="page-title">These services are designed to work together — not fight each other.</h2>
-        <p class="page-copy">A landscaping company does not need five disconnected freelancers, five different dashboards, and five conflicting opinions. It needs one system that helps the right homeowners find you, trust you, contact you, and actually book.</p>
-      </div>
-      <div class="page-grid">
-        <div class="page-card">
-          <span class="page-kicker">Foundation First</span>
-          <h3>We start with the assets that compound.</h3>
-          <p>Your website, Google Business Profile visibility, local SEO, review engine, and follow-up systems create the baseline that makes everything else work better over time.</p>
-          <ul class="page-list">
-            <li>Clear positioning and messaging</li>
-            <li>Conversion-focused website architecture</li>
-            <li>Local visibility that keeps building</li>
-          </ul>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Acceleration Layer</span>
-          <h3>Then we add paid traffic where it makes sense.</h3>
-          <p>Ads are not the foundation. They are the accelerator. Once the offer, landing experience, and follow-up process are strong enough, paid media helps compress time and scale lead flow faster.</p>
-          <ul class="page-list">
-            <li>Google Ads for active intent</li>
-            <li>Meta Ads for attention and nurture</li>
-            <li>Automation that protects lead value</li>
-          </ul>
-        </div>
+  <section style="padding: 80px 0;">
+    <div style="max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px;">
+      <div style="border: 1px dashed rgba(172,231,29,0.28); border-radius: 24px; padding: 48px 28px; background: rgba(255,255,255,0.02); text-align: center;">
+        <span style="display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime);">Body Section</span>
+        <h2 style="font-family: var(--font-h); font-size: clamp(28px, 4vw, 42px); line-height: 1.05; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 14px;">[Blank body — we will design this shortly.]</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--body);">This page intentionally keeps only the header, hero, placeholder body, CTA, and footer until the final page design is ready.</p>
       </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-intro">
-        <span class="page-eyebrow">Service Stack</span>
-        <h2 class="page-title">What we actually build inside the machine.</h2>
-      </div>
-      <div class="page-grid page-grid--three">
-        <div class="page-card"><span class="page-kicker">Website Design</span><h3>Your digital home base.</h3><p>Messaging, trust, offer clarity, and conversion architecture built to turn clicks into booked opportunities.</p><div class="page-band-actions"><a href="/marketing-services/website-design/" class="btn btn--ghost">Explore Website Design</a></div></div>
-        <div class="page-card"><span class="page-kicker">Local SEO</span><h3>Visibility that compounds.</h3><p>Organic search, service-area targeting, and local authority so the market keeps finding you without paying for every click forever.</p><div class="page-band-actions"><a href="/marketing-services/local-seo/" class="btn btn--ghost">Explore Local SEO</a></div></div>
-        <div class="page-card"><span class="page-kicker">GBP Management</span><h3>Maps visibility that matters.</h3><p>Your Google Business Profile is one of the strongest trust and lead assets in local service marketing. We treat it that way.</p><div class="page-band-actions"><a href="/marketing-services/gbp-management/" class="btn btn--ghost">Explore GBP Management</a></div></div>
-        <div class="page-card"><span class="page-kicker">Google Ads</span><h3>Capture active demand.</h3><p>For companies that need faster lead flow, Google Ads can put you in front of homeowners already searching for the work you sell.</p><div class="page-band-actions"><a href="/marketing-services/google-ads/" class="btn btn--ghost">Explore Google Ads</a></div></div>
-        <div class="page-card"><span class="page-kicker">Meta Ads</span><h3>Stay in front of your market.</h3><p>Meta helps you generate awareness, stay memorable, and support retargeting when homeowners are comparing options.</p><div class="page-band-actions"><a href="/marketing-services/meta-ads/" class="btn btn--ghost">Explore Meta Ads</a></div></div>
-        <div class="page-card"><span class="page-kicker">Automation & Reputation</span><h3>Protect every lead you earn.</h3><p>Speed-to-lead, follow-up, review generation, and better customer communication are often where growth is either protected or wasted.</p><div class="page-band-actions"><a href="/marketing-services/automation/" class="btn btn--ghost">Explore Automation</a><a href="/marketing-services/reputation-management/" class="btn btn--ghost">Explore Reputation</a></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-step-grid page-grid--three">
-        <div class="page-step"><div class="page-step-number">01</div><h3>Diagnose the bottleneck.</h3><p>Sometimes the problem is traffic. Sometimes it is messaging. Sometimes it is follow-up. We identify what is actually limiting growth before pushing more noise into the system.</p></div>
-        <div class="page-step"><div class="page-step-number">02</div><h3>Build the right order.</h3><p>We sequence the work so the foundation improves first, then the acceleration channels get stronger returns instead of covering for broken fundamentals.</p></div>
-        <div class="page-step"><div class="page-step-number">03</div><h3>Scale what proves out.</h3><p>Once the right combination starts working, we double down on the channels, offers, and service lines that are producing qualified opportunities.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-band">
-        <div>
-          <span class="page-eyebrow">Best Fit</span>
-          <h2>If you want one partner to own the marketing system, this is where to start.</h2>
-          <p class="page-copy">Our best-fit clients want clear strategy, real accountability, and a team that understands the green industry deeply. They are willing to invest, answer leads, and let momentum build.</p>
-          <div class="page-band-actions">
-            <a href="/programs/" class="btn btn--lime">Compare Our Programs</a>
-            <a href="/get-started/book-strategy-call/" class="btn btn--ghost">Book a Strategy Call</a>
-          </div>
-          <div class="page-note">Need help choosing the right mix? We will tell you what should come first instead of selling you everything at once.</div>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Bad Fit Signals</span>
-          <ul class="page-list">
-            <li>You want fast growth without investing in the inputs required to create it.</li>
-            <li>You want SEO-only results on an unrealistic timeline.</li>
-            <li>You cannot answer or follow up on leads consistently.</li>
-            <li>You want to micromanage every move instead of trusting the process.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER (canonical — matches homepage) -->
-  <footer class="footer-v2">
+<footer class="footer-v2">
     <div class="fv2-glow"></div>
     <div class="fv2-inner">
 

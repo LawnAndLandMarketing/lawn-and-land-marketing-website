@@ -23,6 +23,11 @@
 - Top-priority thin pages were deepened in this workstream: `/programs/`, `/marketing-services/`, `/about/`, and `/contact/`.
 - The next highest-leverage page work should move deeper into service detail pages rather than reopening top-level architecture decisions.
 
+## 2026-04-15 (latest)
+- Homepage remains the only intentionally developed public page for now.
+- All non-home public pages should currently stay header + hero + blank-body placeholder + CTA/footer until the design direction is approved.
+- Written body expansion on non-home pages should pause until that design phase begins.
+
 ## Open Decisions To Track Later
 - Whether any retired routes should be redirected intentionally versus simply removed from internal linking.
 - Exact completion order of service pages after top-level architecture cleanup is done.

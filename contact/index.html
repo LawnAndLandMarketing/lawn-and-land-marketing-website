@@ -225,33 +225,6 @@
       .btn { width: 100%; }
     }
   </style>
-  <style>
-    .page-section { padding: 84px 0; }
-    .page-section + .page-section { padding-top: 0; }
-    .page-wrap { max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px; }
-    .page-intro { max-width: 760px; margin-bottom: 28px; }
-    .page-eyebrow { display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--lime); }
-    .page-title { font-family: var(--font-h); font-size: clamp(30px, 4vw, 46px); line-height: 1.04; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 16px; }
-    .page-copy, .page-card p, .page-step p, .page-note, .page-list li { color: var(--body); }
-    .page-grid, .page-step-grid { display: grid; gap: 24px; }
-    .page-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .page-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .page-card, .page-step, .page-band { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 24px; }
-    .page-card, .page-step { padding: 28px; }
-    .page-card h3, .page-step h3, .page-band h2 { font-family: var(--font-h); color: var(--white); font-size: clamp(24px, 3vw, 34px); line-height: 1.08; font-style: italic; font-weight: 800; margin-bottom: 12px; }
-    .page-kicker { display: inline-flex; margin-bottom: 14px; padding: 8px 12px; border-radius: 999px; background: rgba(172,231,29,0.10); color: var(--lime); font-family: var(--font-l); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    .page-list { display: grid; gap: 12px; margin-top: 18px; }
-    .page-list li { display: flex; gap: 12px; }
-    .page-list li::before { content: '✓'; color: var(--lime); font-weight: 700; flex: 0 0 auto; }
-    .page-step-number { display: inline-flex; width: 38px; height: 38px; border-radius: 999px; align-items: center; justify-content: center; margin-bottom: 16px; background: rgba(172,231,29,0.12); color: var(--lime); font-family: var(--font-h); font-weight: 800; }
-    .page-band { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,0.85fr); gap: 24px; align-items: center; padding: 34px; position: relative; overflow: hidden; }
-    .page-band::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(172,231,29,0.08), transparent 52%, rgba(93,202,73,0.08)); pointer-events: none; }
-    .page-band > div { position: relative; z-index: 1; }
-    .page-band-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-    .page-note { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,0.6); }
-    @media (max-width: 1024px) { .page-grid, .page-grid--three, .page-step-grid, .page-band { grid-template-columns: 1fr; } }
-    @media (max-width: 720px) { .page-card, .page-step, .page-band { padding: 24px; } .page-band-actions { flex-direction: column; } .page-band-actions .btn { width: 100%; } }
-  </style>
 </head>
 <body>
 
@@ -531,106 +504,17 @@
       </div>
     </div>
   </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-intro">
-        <span class="page-eyebrow">Start Here</span>
-        <h2 class="page-title">The fastest path is a strategy call with enough truth on the table.</h2>
-        <p class="page-copy">If you want real guidance, come into the conversation ready to talk honestly about revenue range, lead quality, current marketing, sales follow-up, and what kind of growth you are actually trying to create.</p>
-      </div>
-      <div class="page-grid">
-        <div class="page-card">
-          <span class="page-kicker">Best Use Of The Call</span>
-          <ul class="page-list">
-            <li>Understand what is actually limiting your growth right now</li>
-            <li>See whether Growth or Authority is the better fit</li>
-            <li>Figure out whether your foundation is strong enough for paid ads</li>
-            <li>Get clarity on what should happen first, not just what could happen</li>
-          </ul>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Come Prepared</span>
-          <ul class="page-list">
-            <li>Approximate annual revenue or current size of the business</li>
-            <li>What services you most want to grow</li>
-            <li>Whether you answer leads quickly and consistently</li>
-            <li>What marketing channels are already running today</li>
-          </ul>
-        </div>
+  <section style="padding: 80px 0;">
+    <div style="max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px;">
+      <div style="border: 1px dashed rgba(172,231,29,0.28); border-radius: 24px; padding: 48px 28px; background: rgba(255,255,255,0.02); text-align: center;">
+        <span style="display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime);">Body Section</span>
+        <h2 style="font-family: var(--font-h); font-size: clamp(28px, 4vw, 42px); line-height: 1.05; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 14px;">[Blank body — we will design this shortly.]</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--body);">This page intentionally keeps only the header, hero, placeholder body, CTA, and footer until the final page design is ready.</p>
       </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-intro">
-        <span class="page-eyebrow">What Happens Next</span>
-        <h2 class="page-title">No fluff. No maze. Just a clean next-step process.</h2>
-      </div>
-      <div class="page-step-grid page-grid--three">
-        <div class="page-step"><div class="page-step-number">01</div><h3>We look at the real situation.</h3><p>Offer, traffic, website, local visibility, ad readiness, follow-up, and whether the business is operationally prepared for more lead flow.</p></div>
-        <div class="page-step"><div class="page-step-number">02</div><h3>We show you the smartest path.</h3><p>If the right move is foundation-first, we will say that. If ads should accelerate the plan, we will say that. If it is not a fit yet, we will say that too.</p></div>
-        <div class="page-step"><div class="page-step-number">03</div><h3>You leave with clarity.</h3><p>Whether we work together immediately or not, the goal is for you to understand the gap between where you are and what real growth will require.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-grid">
-        <div class="page-card">
-          <span class="page-kicker">Best Fit</span>
-          <h3>You are likely a fit if...</h3>
-          <ul class="page-list">
-            <li>You want a serious growth partner, not random marketing tasks.</li>
-            <li>You are willing to invest in the business and follow up on leads.</li>
-            <li>You understand momentum takes time and trust.</li>
-            <li>You want honest feedback more than empty reassurance.</li>
-          </ul>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Not Yet Fit</span>
-          <h3>We may not be the right move yet if...</h3>
-          <ul class="page-list">
-            <li>You want SEO-only miracles on a tiny budget.</li>
-            <li>You cannot answer the phone or follow up on leads consistently.</li>
-            <li>You want instant certainty before doing the foundational work.</li>
-            <li>You are looking for someone to blame instead of a partner to build with.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="page-wrap">
-      <div class="page-band">
-        <div>
-          <span class="page-eyebrow">Reach Out</span>
-          <h2>Book the call if you want clarity. Email if you have a direct question first.</h2>
-          <p class="page-copy">The strategy call is the best path for companies seriously considering growth. If you need something else first, reach out and we will point you in the right direction.</p>
-          <div class="page-band-actions">
-            <a href="/get-started/book-strategy-call/" class="btn btn--lime">Book a Free Strategy Call</a>
-            <a href="mailto:hello@lawnandlandmarketing.com" class="btn btn--ghost">Email hello@lawnandlandmarketing.com</a>
-          </div>
-          <div class="page-note">No pressure. No generic sales script. Just a smart conversation about where the business is and what it would take to grow.</div>
-        </div>
-        <div class="page-card">
-          <span class="page-kicker">Quick Answers</span>
-          <ul class="page-list">
-            <li>Yes, we work exclusively with green-industry companies.</li>
-            <li>No, not every company should jump straight into paid ads.</li>
-            <li>Yes, we will push back if your current bottleneck is operational, not marketing.</li>
-            <li>Yes, the right next step might be foundation-building before aggressive scaling.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER (canonical — matches homepage) -->
-  <footer class="footer-v2">
+<footer class="footer-v2">
     <div class="fv2-glow"></div>
     <div class="fv2-inner">
 
