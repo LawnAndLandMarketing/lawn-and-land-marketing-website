@@ -12,7 +12,18 @@ Important: this website project is separate from any internal Ground Control con
 
 ## Current state at a glance
 
-The homepage is the only intentionally developed public page right now.
+The homepage is still the only intentionally developed public page right now.
+
+Exception:
+- `/programs/` now has a lightweight body-layout prototype live for review.
+- That page currently includes a simple structure with placeholder/lorem content blocks for:
+  - program philosophy
+  - quick breakdown
+  - Growth Program
+  - Authority Program
+  - right-stage closing section
+- This simpler version was intentionally kept after a more aggressive redesign pass was rejected.
+- Treat `/programs/` as an in-review layout prototype, not a finished design system.
 
 All other public pages are intentionally being held in this temporary structure:
 - header
@@ -24,7 +35,7 @@ All other public pages are intentionally being held in this temporary structure:
 The placeholder copy currently used on non-home pages is:
 - [Blank body — we will design this shortly.]
 
-This is intentional.
+This is still intentional for all non-home pages except the current `/programs/` prototype.
 Do not start re-writing page bodies unless the design phase has been explicitly restarted.
 
 ## Canonical route rules
@@ -98,13 +109,13 @@ Those docs are the fastest way to recover context.
 
 ## Recommended next phase
 
-The next phase is design, not copy.
+The next phase is still design, not copy.
 
 Best restart path:
-1. define the shared non-home page body system
-2. pick the first page template to fully design
-3. apply that system page-by-page
-4. only then deepen body content where needed
+1. review Matt's feedback on the current `/programs/` prototype
+2. decide what to keep / kill from that layout
+3. redesign the Programs page with stronger visual hierarchy before writing final copy
+4. only then use the approved design direction to guide other non-home pages
 
 ## Deployment
 
@@ -116,6 +127,6 @@ GitHub Actions workflow:
 
 If you come back cold later, assume this:
 - homepage = live developed benchmark page
-- everything else = intentionally held shell
+- everything else = intentionally held shell, except `/programs/` which now has a simple layout prototype under review
 - route hygiene work is already done
-- the decision that matters most is preserving the blank-body convention until design begins
+- the decision that matters most is preserving the blank-body convention on non-home pages while using `/programs/` as the current design exploration page

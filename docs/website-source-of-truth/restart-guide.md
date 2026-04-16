@@ -4,7 +4,7 @@ Use this file when coming back to the Lawn & Land website after time away.
 
 ## One-paragraph truth
 
-The homepage is the only intentionally developed page right now. All other public pages were intentionally reset to a temporary shell state: header + hero + blank-body placeholder + CTA/footer. Route hygiene was already cleaned up, canonical routes are set, and the next real phase is design — not more long-form body writing.
+The homepage is still the only intentionally developed page right now. Most other public pages remain in the temporary shell state: header + hero + blank-body placeholder + CTA/footer. The one exception is `/programs/`, which now has a simple live layout prototype with lorem placeholder content. A more aggressive redesign was attempted and rejected, then the simpler version was restored. Route hygiene is already clean, and the next real phase is still design refinement — not final long-form body writing.
 
 ## The fastest possible restart path
 
@@ -30,10 +30,21 @@ All other public pages:
 - CTA
 - footer
 
+Current exception:
+- `/programs/` no longer uses the blank-body placeholder
+- it currently has a simple review prototype with these sections:
+  - program philosophy
+  - quick breakdown
+  - Growth Program
+  - Authority Program
+  - right-stage closing section
+- copy inside that body is still placeholder/lorem and should be treated as layout scaffolding, not approved messaging
+
 Current placeholder text:
 - [Blank body — we will design this shortly.]
 
 Do not expand non-home pages with long body copy unless the design phase has restarted.
+Do not assume the current `/programs/` layout is approved; it is only the current review baseline.
 
 ## Canonical routes
 
@@ -66,6 +77,9 @@ Structural work already done:
 Current page-state work already done:
 - non-home pages reset back to shell state intentionally
 - homepage left as the only developed page
+- `/programs/` reopened as the active design exploration page
+- a simple Programs prototype is currently live
+- a stronger v2 redesign was rejected and reverted
 
 ## If you need to verify the state quickly
 
@@ -79,17 +93,18 @@ Check these live URLs first:
 
 Expected outcome:
 - homepage has real content
-- non-home pages show hero + blank-body placeholder + CTA/footer
+- most non-home pages show hero + blank-body placeholder + CTA/footer
+- `/programs/` shows the simpler prototype with five body sections, not the blank-body placeholder
 
 ## The next best move when this project resumes
 
 Recommended order:
-1. design the shared non-home page body system
-2. choose the first page type to fully design
-3. apply the design system to a small set of pages
+1. review Matt's detailed feedback on the current `/programs/` prototype
+2. redesign `/programs/` from that feedback until the design direction is right
+3. use the approved Programs direction to guide the non-home page system
 4. only then decide what deeper content needs to be written
 
 ## Important guardrail
 
-If the project is resumed months later, do not assume previously written body expansions should be restored.
-The last explicit direction from Matt was to keep non-home pages blank-bodied until design is approved.
+If the project is resumed months later, do not assume previously written redesigns should be restored.
+The last explicit direction from Matt was to keep the simpler `/programs/` prototype live while he reviews it and prepares detailed feedback, and to keep other non-home pages blank-bodied until design is approved.

@@ -28,7 +28,16 @@
 - All non-home public pages should currently stay header + hero + blank-body placeholder + CTA/footer until the design direction is approved.
 - Written body expansion on non-home pages should pause until that design phase begins.
 
+## 2026-04-16
+- `/programs/` has been reopened as the current design exploration page.
+- A simple body-layout prototype was added to `/programs/` with placeholder/lorem blocks for philosophy, quick breakdown, Growth, Authority, and right-stage guidance.
+- A more aggressive visual redesign pass for `/programs/` was attempted and then rejected.
+- The simpler pre-v2 Programs version was restored and is the current live state to review from.
+- For now, keep the simpler `/programs/` prototype live while Matt reviews and prepares detailed feedback.
+- Do not assume the rejected v2 direction should be revived without explicit approval.
+
 ## Open Decisions To Track Later
+- What exact visual direction from the current `/programs/` prototype should become the reusable non-home page system.
 - Whether any retired routes should be redirected intentionally versus simply removed from internal linking.
 - Exact completion order of service pages after top-level architecture cleanup is done.
 - Whether additional proof-heavy pages like results or case studies should return later in a different form.

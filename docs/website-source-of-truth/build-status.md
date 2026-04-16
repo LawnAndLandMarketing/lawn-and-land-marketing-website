@@ -37,9 +37,9 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 - Notes: page is intentionally reset to header + hero + blank body + CTA/footer until design phase
 
 ### Programs
-- Status: intentionally held
+- Status: live, in review
 - Quality read: scaffolded
-- Notes: page is intentionally reset to header + hero + blank body + CTA/footer until design phase
+- Notes: `/programs/` now has a simple layout prototype with placeholder/lorem copy blocks for philosophy, comparison, Growth, Authority, and closing stage guidance; this simpler version was kept after a stronger v2 redesign was rejected pending Matt's feedback
 
 ### Marketing Services
 - Status: intentionally held
@@ -67,21 +67,23 @@ Many secondary pages exist live, but a large percentage of them are still scaffo
 1. Remaining stale internal links to dead routes were cleaned.
 2. All non-home pages were reset to the approved temporary structure: header + hero + blank-body placeholder + CTA/footer.
 3. Homepage remains the only intentionally developed page right now.
+4. `/programs/` was reopened as the current design exploration page and now holds a simple, live body-layout prototype with lorem placeholder content.
+5. A more aggressive visual redesign for `/programs/` was attempted, rejected, and reverted; the simpler version is the current truth to review from.
 
 ## Highest-Priority Work Next
-1. design the blank body system for non-home pages
-2. decide the first page templates to fully design
-3. then deepen page bodies only after design direction is locked
+1. collect Matt's detailed feedback on the current `/programs/` prototype
+2. redesign `/programs/` from that feedback until the design direction feels right
+3. use the approved Programs direction to inform the next non-home page system
 
 ## Recommended Working Order
 Phase 1 — preserve current truth
 - keep homepage as the only developed public page
-- keep non-home pages in blank-body shell state
+- keep non-home pages in blank-body shell state except for the current `/programs/` prototype
 - keep canonical route hygiene intact
 
 Phase 2 — design system work
-- define the shared non-home page body system
-- choose the first page template to fully design
+- iterate on `/programs/` until the visual hierarchy and reading psychology are approved
+- treat that page as the leading experiment for the non-home body system
 
 Phase 3 — deliberate expansion
 - apply the approved design pattern to selected pages

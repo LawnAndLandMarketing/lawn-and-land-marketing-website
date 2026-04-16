@@ -14,7 +14,7 @@ Status key
 | Core | About | `/about/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Core | Contact | `/contact/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Core | Get Started | `/get-started/book-strategy-call/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
-| Programs | Programs hub | `/programs/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
+| Programs | Programs hub | `/programs/` | yes | scaffolded | Live simple layout prototype with placeholder/lorem content for philosophy, quick breakdown, Growth, Authority, and right-stage close; current review baseline after v2 redesign was rejected and reverted. |
 | Programs | Growth | `/programs/growth/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Programs | Authority | `/programs/authority/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
 | Marketing Services | Services hub | `/marketing-services/` | yes | scaffolded | Intentionally reset to hero + blank body + CTA/footer until design phase. |
@@ -52,9 +52,9 @@ Status key
 | legacy | older orphan routes like `/team/`, `/results/`, `/good-fit/`, `/book/`, old article URLs | Internal uses removed or replaced in the route-hygiene pass | Keep out of the internal link graph unless intentionally reintroduced |
 
 ## Highest-Leverage Work Next
-1. design the shared blank-body page system for non-home pages
-2. choose which page template gets designed first
-3. deepen page bodies only after design direction is approved
+1. get Matt's detailed feedback on the current `/programs/` review baseline
+2. iterate on the Programs page until the visual system feels right
+3. only then apply the approved direction to other non-home pages
 
 ## Audit Notes
 - The live homepage is ahead of the rest of the site.
