@@ -387,468 +387,225 @@
     .feature-card h3 { margin-bottom: 10px; }
     .summary-grid { margin-top: 28px; }
     .expect-grid, .faq-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    .programs-v2 {
+    .programs-stack {
       max-width: var(--max);
       margin: 0 auto;
-      padding: 84px 24px 108px;
+      padding: 80px 24px 96px;
       display: grid;
-      gap: 34px;
+      gap: 28px;
     }
-    .program-band {
+    .program-shell {
       position: relative;
       overflow: hidden;
-      border-radius: 30px;
+      padding: 36px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
       border: 1px solid rgba(255,255,255,0.08);
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      box-shadow: 0 24px 70px rgba(0,0,0,0.28);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
     }
-    .program-band::before {
+    .program-shell::before {
       content: '';
       position: absolute;
       inset: 0;
       pointer-events: none;
       background:
-        radial-gradient(circle at top left, rgba(172,231,29,0.12), transparent 24%),
-        radial-gradient(circle at bottom right, rgba(93,202,73,0.09), transparent 26%);
+        radial-gradient(circle at top left, rgba(172,231,29,0.12), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(93,202,73,0.10), transparent 24%);
       opacity: 0.9;
     }
-    .program-band > * { position: relative; z-index: 1; }
-    .program-band--light {
-      background: linear-gradient(180deg, #f5f8ef, #ebf1e1);
-      border-color: rgba(172,231,29,0.16);
-      box-shadow: 0 28px 80px rgba(0,0,0,0.22);
+    .program-shell > * { position: relative; z-index: 1; }
+    .program-shell--intro {
+      display: grid;
+      gap: 22px;
     }
-    .program-band--light::before {
-      background:
-        radial-gradient(circle at top left, rgba(172,231,29,0.20), transparent 26%),
-        linear-gradient(135deg, rgba(12,26,15,0.02), transparent 55%);
+    .program-shell--spotlight {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 28px;
+      align-items: stretch;
     }
-    .program-band--light,
-    .program-band--light .program-v2-title,
-    .program-band--light .program-v2-lead,
-    .program-band--light .program-v2-copy,
-    .program-band--light .program-v2-note,
-    .program-band--light .program-v2-chip,
-    .program-band--light .program-v2-rail-label,
-    .program-band--light .program-v2-rail-value,
-    .program-band--light .program-v2-mini,
-    .program-band--light .program-v2-card,
-    .program-band--light .program-v2-step,
-    .program-band--light .program-v2-panel-title,
-    .program-band--light .program-v2-badge {
-      color: #0d1810;
+    .program-shell--spotlight.program-shell--reverse {
+      grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
     }
-    .program-band--light .program-v2-copy,
-    .program-band--light .program-v2-note,
-    .program-band--light .program-v2-mini p,
-    .program-band--light .program-v2-card p,
-    .program-band--light .program-v2-step p {
-      color: rgba(13,24,16,0.82);
+    .program-shell--spotlight.program-shell--reverse .program-visual {
+      order: -1;
     }
-    .program-band--light .program-v2-card,
-    .program-band--light .program-v2-mini,
-    .program-band--light .program-v2-step,
-    .program-band--light .program-v2-visual,
-    .program-band--light .program-v2-action-card {
-      background: rgba(255,255,255,0.62);
-      border-color: rgba(13,24,16,0.08);
-      box-shadow: 0 10px 30px rgba(13,24,16,0.08);
+    .program-intro-grid,
+    .program-breakdown-grid {
+      display: grid;
+      gap: 18px;
     }
-    .program-v2-kicker {
+    .program-intro-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+    .program-breakdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .program-heading {
+      max-width: 760px;
+    }
+    .program-heading h2,
+    .program-copy h2 {
+      font-family: var(--font-h);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.02;
+      font-style: italic;
+      font-weight: 800;
+      color: var(--white);
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+    .program-heading p,
+    .program-copy p,
+    .program-mini-card p,
+    .program-stat,
+    .program-visual-note {
+      color: var(--body);
+    }
+    .program-kicker {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       font-family: var(--font-l);
       font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--lime);
     }
-    .program-v2-kicker::before {
+    .program-kicker::before {
       content: '';
       width: 10px;
       height: 10px;
       border-radius: 999px;
       background: var(--lime);
-      box-shadow: 0 0 16px rgba(172,231,29,0.6);
+      box-shadow: 0 0 18px rgba(172,231,29,0.6);
     }
-    .program-v2-title {
-      font-family: var(--font-h);
-      font-size: clamp(32px, 4.3vw, 54px);
-      line-height: 0.96;
-      font-style: italic;
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      color: var(--white);
-      margin: 0 0 14px;
-      max-width: 13ch;
-    }
-    .program-v2-title--wide { max-width: 16ch; }
-    .program-v2-lead {
-      max-width: 58ch;
-      font-size: 18px;
-      color: rgba(255,255,255,0.86);
-      margin: 0;
-    }
-    .program-v2-copy {
-      font-size: 16px;
-      color: rgba(255,255,255,0.82);
-    }
-    .program-v2-intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-    }
-    .program-v2-intro-copy {
-      padding: 42px;
-    }
-    .program-v2-principles {
-      padding: 22px;
-      border-left: 1px solid rgba(255,255,255,0.08);
-      display: grid;
-      gap: 14px;
-      align-content: center;
-      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-    }
-    .program-v2-mini,
-    .program-v2-card,
-    .program-v2-step,
-    .program-v2-visual,
-    .program-v2-action-card {
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.08);
+    .program-mini-card,
+    .program-compare-card,
+    .program-visual {
+      border-radius: 22px;
       background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
     }
-    .program-v2-mini {
-      padding: 18px 18px 20px;
-    }
-    .program-v2-mini strong,
-    .program-v2-card h3,
-    .program-v2-panel-title,
-    .program-v2-visual strong {
-      display: block;
-      font-family: var(--font-h);
-      font-style: italic;
-      color: var(--white);
-    }
-    .program-v2-mini strong {
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-    .program-v2-mini p {
-      margin: 0;
-      color: rgba(255,255,255,0.82);
-      font-size: 15px;
-    }
-    .program-v2-compare {
-      padding: 34px;
-      display: grid;
-      gap: 22px;
-    }
-    .program-v2-compare-top {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap: 22px;
-      align-items: end;
-    }
-    .program-v2-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-start;
-    }
-    .program-v2-chip,
-    .program-v2-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-family: var(--font-l);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid rgba(13,24,16,0.10);
-      background: rgba(255,255,255,0.68);
-      color: #0d1810;
-    }
-    .program-v2-badge {
-      background: rgba(172,231,29,0.14);
-      border-color: rgba(172,231,29,0.28);
-    }
-    .program-v2-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .program-v2-card {
+    .program-mini-card,
+    .program-compare-card {
       padding: 22px;
-      display: grid;
-      gap: 18px;
     }
-    .program-v2-card--growth {
-      background: linear-gradient(180deg, rgba(8,18,11,0.92), rgba(9,24,13,0.86));
-      border-color: rgba(172,231,29,0.16);
-    }
-    .program-v2-card--authority {
-      background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(244,248,237,0.90));
-      border-color: rgba(13,24,16,0.08);
-      color: #0d1810;
-    }
-    .program-v2-card--authority h3,
-    .program-v2-card--authority .program-v2-copy,
-    .program-v2-card--authority .program-v2-note,
-    .program-v2-card--authority .program-v2-rail-label,
-    .program-v2-card--authority .program-v2-rail-value { color: #0d1810; }
-    .program-v2-card--authority .program-v2-copy,
-    .program-v2-card--authority .program-v2-note { color: rgba(13,24,16,0.74); }
-    .program-v2-rail {
-      display: grid;
-      gap: 10px;
-    }
-    .program-v2-rail-row {
-      display: grid;
-      grid-template-columns: 124px minmax(0,1fr);
-      gap: 14px;
-      align-items: start;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .program-v2-card--authority .program-v2-rail-row {
-      border-top-color: rgba(13,24,16,0.10);
-    }
-    .program-v2-rail-label {
-      font-family: var(--font-l);
-      font-size: 11px;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.62);
-    }
-    .program-v2-rail-value {
-      color: rgba(255,255,255,0.90);
-      font-size: 15px;
-    }
-    .program-v2-stage-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .program-v2-stage {
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
-    }
-    .program-v2-stage--reverse {
-      grid-template-columns: minmax(300px, 0.96fr) minmax(0, 1.04fr);
-    }
-    .program-v2-stage--reverse .program-v2-visual { order: -1; }
-    .program-v2-content {
-      padding: 36px;
-      display: grid;
-      gap: 18px;
-      align-content: center;
-    }
-    .program-v2-content h2 {
+    .program-mini-card h3,
+    .program-compare-card h3 {
       font-family: var(--font-h);
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 0.98;
       font-style: italic;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-size: 24px;
       color: var(--white);
-      margin: 0;
+      margin-bottom: 10px;
     }
-    .program-v2-stage--authority .program-v2-content h2,
-    .program-v2-stage--authority .program-v2-content,
-    .program-v2-stage--authority .program-v2-content .program-v2-copy,
-    .program-v2-stage--authority .program-v2-content .program-v2-note,
-    .program-v2-stage--authority .program-v2-panel-title,
-    .program-v2-stage--authority .program-v2-step,
-    .program-v2-stage--authority .program-v2-step p,
-    .program-v2-stage--authority .program-v2-visual strong,
-    .program-v2-stage--authority .program-v2-visual-note {
-      color: #0d1810;
-    }
-    .program-v2-stage--authority .program-v2-content .program-v2-copy,
-    .program-v2-stage--authority .program-v2-content .program-v2-note,
-    .program-v2-stage--authority .program-v2-step p,
-    .program-v2-stage--authority .program-v2-visual-note {
-      color: rgba(13,24,16,0.74);
-    }
-    .program-v2-stage--authority .program-v2-step,
-    .program-v2-stage--authority .program-v2-visual,
-    .program-v2-stage--authority .program-v2-action-card {
-      background: rgba(255,255,255,0.62);
-      border-color: rgba(13,24,16,0.10);
-    }
-    .program-v2-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-family: var(--font-l);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      width: fit-content;
-      background: rgba(172,231,29,0.12);
-      border: 1px solid rgba(172,231,29,0.22);
-      color: var(--lime);
-    }
-    .program-v2-pill--authority {
-      background: rgba(13,24,16,0.08);
-      border-color: rgba(13,24,16,0.14);
-      color: #0d1810;
-    }
-    .program-v2-steps {
+    .program-mini-card ul,
+    .program-compare-card ul,
+    .program-bullets {
       display: grid;
       gap: 12px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 18px;
     }
-    .program-v2-step {
-      padding: 18px;
+    .program-mini-card li,
+    .program-compare-card li,
+    .program-bullets li {
+      display: flex;
+      gap: 12px;
+      color: rgba(255,255,255,0.8);
     }
-    .program-v2-step strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-family: var(--font-l);
+    .program-mini-card li::before,
+    .program-compare-card li::before,
+    .program-bullets li::before {
+      content: '•';
       color: var(--lime);
+      font-weight: 700;
+      flex: 0 0 auto;
     }
-    .program-v2-step p {
-      margin: 0;
-      color: rgba(255,255,255,0.84);
-      font-size: 14px;
-    }
-    .program-v2-link {
+    .program-tier {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin-top: 6px;
-      font-family: var(--font-l);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--white);
-    }
-    .program-v2-link::after {
-      content: '→';
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(172,231,29,0.09);
+      border: 1px solid rgba(172,231,29,0.18);
       color: var(--lime);
+      font-family: var(--font-l);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
-    .program-v2-stage--authority .program-v2-link { color: #0d1810; }
-    .program-v2-visual {
-      padding: 22px;
+    .program-tier--authority {
+      background: rgba(93,202,73,0.08);
+      border-color: rgba(93,202,73,0.22);
+    }
+    .program-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .program-copy .btn { margin-top: 22px; align-self: flex-start; }
+    .program-visual {
+      min-height: 100%;
+      padding: 24px;
       display: grid;
-      gap: 16px;
       align-content: space-between;
       background:
-        linear-gradient(135deg, rgba(172,231,29,0.10), transparent 52%),
+        linear-gradient(135deg, rgba(172,231,29,0.10), transparent 45%),
         linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
     }
-    .program-v2-panel-title {
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.68);
-      font-family: var(--font-l);
-    }
-    .program-v2-visual-core {
-      min-height: 292px;
-      border-radius: 24px;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,0.08);
+    .program-visual-frame {
+      min-height: 280px;
+      border-radius: 18px;
+      border: 1px dashed rgba(172,231,29,0.22);
       background:
-        linear-gradient(180deg, rgba(7,16,10,0.96), rgba(10,23,12,0.88)),
-        radial-gradient(circle at top right, rgba(172,231,29,0.16), transparent 30%);
+        linear-gradient(135deg, rgba(7,16,10,0.92), rgba(10,22,12,0.8)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 24px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 24px);
       display: grid;
-      gap: 16px;
-      align-content: space-between;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
     }
-    .program-v2-stage--authority .program-v2-visual-core {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.84), rgba(240,247,232,0.94)),
-        radial-gradient(circle at top right, rgba(172,231,29,0.18), transparent 30%);
-      border-color: rgba(13,24,16,0.08);
+    .program-visual-frame strong {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 26px;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 10px;
     }
-    .program-v2-visual-label {
+    .program-visual-label {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: fit-content;
+      margin-bottom: 16px;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(172,231,29,0.18);
+      color: rgba(255,255,255,0.72);
       font-family: var(--font-l);
       font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.72);
     }
-    .program-v2-stage--authority .program-v2-visual-label {
-      background: rgba(13,24,16,0.05);
-      border-color: rgba(13,24,16,0.08);
-      color: rgba(13,24,16,0.65);
-    }
-    .program-v2-visual strong {
-      font-size: clamp(26px, 3vw, 36px);
-      line-height: 0.98;
-      margin: 0;
-    }
-    .program-v2-visual-grid {
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
-    .program-v2-visual-grid span {
-      padding: 12px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
-      font-size: 13px;
-      color: rgba(255,255,255,0.78);
-    }
-    .program-v2-stage--authority .program-v2-visual-grid span {
-      background: rgba(13,24,16,0.04);
-      border-color: rgba(13,24,16,0.08);
-      color: rgba(13,24,16,0.74);
-    }
-    .program-v2-visual-note {
-      margin: 0;
+    .program-visual-note {
+      margin-top: 14px;
       font-size: 14px;
-      color: rgba(255,255,255,0.76);
     }
-    .program-v2-decision {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    .program-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      font-family: var(--font-l);
+      font-size: 13px;
+      color: rgba(255,255,255,0.66);
     }
-    .program-v2-decision-copy {
-      padding: 40px;
-      display: grid;
-      gap: 16px;
-    }
-    .program-v2-action-card {
-      padding: 22px;
-      display: grid;
-      gap: 14px;
-      align-content: center;
-      border-left: 1px solid rgba(255,255,255,0.08);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-    }
-    .program-v2-action-card h3 {
-      margin: 0;
-      font-family: var(--font-h);
-      font-size: 28px;
-      line-height: 1.02;
-      font-style: italic;
-      color: var(--white);
-    }
-    .program-v2-note {
-      font-size: 15px;
-      color: rgba(255,255,255,0.68);
-      margin: 0;
+    .program-stat::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--lime);
+      box-shadow: 0 0 16px rgba(172,231,29,0.65);
     }
     .cta-band {
       display: grid;
@@ -889,23 +646,12 @@
       .expect-grid,
       .faq-grid,
       .cta-band,
-      .program-v2-intro,
-      .program-v2-compare-top,
-      .program-v2-card-grid,
-      .program-v2-stage,
-      .program-v2-stage--reverse,
-      .program-v2-decision,
-      .program-v2-stage-grid,
-      .program-v2-steps { grid-template-columns: 1fr; }
+      .program-intro-grid,
+      .program-breakdown-grid,
+      .program-shell--spotlight,
+      .program-shell--spotlight.program-shell--reverse { grid-template-columns: 1fr; }
       .hero-stats { grid-template-columns: 1fr; max-width: 420px; }
-      .program-v2-intro-copy,
-      .program-v2-compare,
-      .program-v2-content,
-      .program-v2-decision-copy { padding: 32px; }
-      .program-v2-principles,
-      .program-v2-action-card { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); }
-      .program-band--light .program-v2-action-card { border-top-color: rgba(13,24,16,0.08); }
-      .program-v2-stage--reverse .program-v2-visual { order: 0; }
+      .program-shell--spotlight.program-shell--reverse .program-visual { order: 0; }
     }
     @media (max-width: 720px) {
       .simple-hero { min-height: auto; padding: 56px 0 28px; }
@@ -916,21 +662,13 @@
       .expect-card,
       .faq-card,
       .summary-card,
-      .cta-band { padding: 24px; }
-      .programs-v2 { padding: 56px 20px 76px; gap: 24px; }
-      .program-v2-intro-copy,
-      .program-v2-compare,
-      .program-v2-content,
-      .program-v2-decision-copy,
-      .program-v2-principles,
-      .program-v2-action-card { padding: 24px; }
-      .program-v2-title,
-      .program-v2-content h2 { max-width: none; }
-      .program-v2-visual-core { min-height: 240px; }
-      .program-v2-rail-row { grid-template-columns: 1fr; gap: 6px; }
+      .cta-band,
+      .program-shell { padding: 24px; }
+      .programs-stack { padding: 56px 20px 72px; }
+      .program-visual-frame { min-height: 220px; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .btn { width: 100%; }
-      .program-v2-link { width: 100%; justify-content: center; }
+      .program-copy .btn { align-self: stretch; }
     }
   </style>
 </head>
@@ -1213,183 +951,111 @@
       </div>
     </div>
   </section>
-  <section class="programs-v2">
-    <div class="program-band">
-      <div class="program-v2-intro">
-        <div class="program-v2-intro-copy">
-          <div class="program-v2-kicker">Program Philosophy</div>
-          <h2 class="program-v2-title">Built as a system, not a stack of random services.</h2>
-          <p class="program-v2-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere sem eu dui lacinia, vel pretium lorem tincidunt. Quisque id sem a arcu finibus volutpat sed a nunc.</p>
+  <section class="programs-stack">
+    <div class="program-shell program-shell--intro">
+      <div class="program-intro-grid">
+        <div class="program-heading">
+          <div class="program-kicker">Program Philosophy</div>
+          <h2>Why we build around programs instead of piecemeal services</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, nibh ut feugiat faucibus, velit mauris feugiat arcu, vitae mattis nisl erat in augue. Sed luctus, eros eget tristique hendrerit, purus lorem feugiat turpis, vitae vulputate mi nibh ut justo.</p>
         </div>
-        <div class="program-v2-principles">
-          <div class="program-v2-mini">
-            <strong>Better sequencing</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id nisi et velit luctus gravida.</p>
-          </div>
-          <div class="program-v2-mini">
-            <strong>Clearer momentum</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis ipsum non pretium rutrum.</p>
-          </div>
-          <div class="program-v2-mini">
-            <strong>Less wasted effort</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet nibh ut erat posuere ultrices.</p>
-          </div>
+        <div class="program-mini-card">
+          <h3>Why it works</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula, ligula vitae varius faucibus, massa lorem feugiat dui, nec faucibus libero nisl non arcu.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Praesent commodo lectus ac lorem faucibus, a luctus justo luctus.</li>
+            <li>Vivamus feugiat purus vel massa luctus, sed viverra ligula tincidunt.</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="program-band program-band--light">
-      <div class="program-v2-compare">
-        <div class="program-v2-compare-top">
+    <div class="program-shell">
+      <div class="program-heading">
+        <div class="program-kicker">Quick Breakdown</div>
+        <h2>Two programs. Two stages of growth.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et tortor vitae ipsum aliquet fermentum. Curabitur feugiat, mi vel pharetra pharetra, nisl arcu malesuada massa, et dictum ex augue vitae purus.</p>
+      </div>
+      <div class="program-breakdown-grid">
+        <div class="program-compare-card">
+          <span class="program-tier">For six-figure companies</span>
+          <h3>Growth Program</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus sed arcu aliquet volutpat vel at tellus.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Morbi vulputate lorem sit amet justo malesuada, eu aliquet nibh aliquam.</li>
+            <li>Vestibulum at velit sed justo vulputate posuere.</li>
+          </ul>
+        </div>
+        <div class="program-compare-card">
+          <span class="program-tier program-tier--authority">For seven-figure companies</span>
+          <h3>Authority Program</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus sed arcu aliquet volutpat vel at tellus.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Morbi vulputate lorem sit amet justo malesuada, eu aliquet nibh aliquam.</li>
+            <li>Vestibulum at velit sed justo vulputate posuere.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-shell program-shell--spotlight">
+      <div class="program-copy">
+        <span class="program-tier">For six-figure companies</span>
+        <h2>Growth Program</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor magna at neque vulputate, ut efficitur nisi tristique. Nunc tristique, lorem sed commodo posuere, enim purus tempus lorem, et tempus libero tortor in mauris.</p>
+        <ul class="program-bullets">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Aliquam vehicula tortor a urna suscipit, id interdum arcu laoreet.</li>
+          <li>Phasellus feugiat eros in lectus accumsan, nec pulvinar orci faucibus.</li>
+          <li>Vivamus luctus lorem eu sem faucibus, ac facilisis neque malesuada.</li>
+        </ul>
+        <a href="/programs/growth/" class="btn btn--ghost">Explore the Growth Program</a>
+      </div>
+      <div class="program-visual">
+        <div class="program-visual-frame">
           <div>
-            <div class="program-v2-kicker">Choose Your Path</div>
-            <h2 class="program-v2-title program-v2-title--wide">Two programs. One clear decision.</h2>
-          </div>
-          <div class="program-v2-chip-row">
-            <span class="program-v2-chip">Foundation first</span>
-            <span class="program-v2-chip">Scale second</span>
-            <span class="program-v2-badge">Most companies should start with Growth</span>
+            <span class="program-visual-label">Filler Visual</span>
+            <strong>Growth Program Graphic</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus nisl vel dui posuere, in vulputate augue dictum.</p>
           </div>
         </div>
-
-        <div class="program-v2-card-grid">
-          <div class="program-v2-card program-v2-card--growth">
-            <span class="program-v2-pill">For six-figure companies</span>
-            <h3>Growth Program</h3>
-            <p class="program-v2-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae lacus nec ligula imperdiet tincidunt.</p>
-            <div class="program-v2-rail">
-              <div class="program-v2-rail-row">
-                <div class="program-v2-rail-label">Best for</div>
-                <div class="program-v2-rail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              </div>
-              <div class="program-v2-rail-row">
-                <div class="program-v2-rail-label">Focus</div>
-                <div class="program-v2-rail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              </div>
-              <div class="program-v2-rail-row">
-                <div class="program-v2-rail-label">Outcome</div>
-                <div class="program-v2-rail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="program-v2-card program-v2-card--authority">
-            <span class="program-v2-pill program-v2-pill--authority">For seven-figure companies</span>
-            <h3>Authority Program</h3>
-            <p class="program-v2-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae lacus nec ligula imperdiet tincidunt.</p>
-            <div class="program-v2-rail">
-              <div class="program-v2-rail-row">
-                <div class="program-v2-rail-label">Best for</div>
-                <div class="program-v2-rail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              </div>
-              <div class="program-v2-rail-row">
-                <div class="program-v2-rail-label">Focus</div>
-                <div class="program-v2-rail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              </div>
-              <div class="program-v2-rail-row">
-                <div class="program-v2-rail-label">Outcome</div>
-                <div class="program-v2-rail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="program-stat">Placeholder visual area for future program-specific graphic or image.</div>
       </div>
     </div>
 
-    <div class="program-band">
-      <div class="program-v2-stage-grid">
-        <div class="program-v2-stage">
-          <div class="program-v2-content">
-            <span class="program-v2-pill">For six-figure companies</span>
-            <h2>Growth gives the business a stronger base to build on.</h2>
-            <p class="program-v2-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit magna non ipsum bibendum, a posuere arcu feugiat.</p>
-            <div class="program-v2-steps">
-              <div class="program-v2-step">
-                <strong>Foundation</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="program-v2-step">
-                <strong>Visibility</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="program-v2-step">
-                <strong>Momentum</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <a href="/programs/growth/" class="program-v2-link">Explore the Growth Program</a>
-          </div>
-          <div class="program-v2-visual">
-            <div class="program-v2-panel-title">Placeholder visual</div>
-            <div class="program-v2-visual-core">
-              <div>
-                <span class="program-v2-visual-label">Growth graphic</span>
-                <strong>Foundation before acceleration.</strong>
-              </div>
-              <div class="program-v2-visual-grid">
-                <span>Lorem ipsum dolor</span>
-                <span>Vestibulum auctor</span>
-                <span>SEO momentum</span>
-                <span>Review engine</span>
-              </div>
-              <p class="program-v2-visual-note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non libero in nibh tristique laoreet.</p>
-            </div>
+    <div class="program-shell program-shell--spotlight program-shell--reverse">
+      <div class="program-copy">
+        <span class="program-tier program-tier--authority">For seven-figure companies</span>
+        <h2>Authority Program</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor magna at neque vulputate, ut efficitur nisi tristique. Nunc tristique, lorem sed commodo posuere, enim purus tempus lorem, et tempus libero tortor in mauris.</p>
+        <ul class="program-bullets">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Aliquam vehicula tortor a urna suscipit, id interdum arcu laoreet.</li>
+          <li>Phasellus feugiat eros in lectus accumsan, nec pulvinar orci faucibus.</li>
+          <li>Vivamus luctus lorem eu sem faucibus, ac facilisis neque malesuada.</li>
+        </ul>
+        <a href="/programs/authority/" class="btn btn--ghost">Explore the Authority Program</a>
+      </div>
+      <div class="program-visual">
+        <div class="program-visual-frame">
+          <div>
+            <span class="program-visual-label">Filler Visual</span>
+            <strong>Authority Program Graphic</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus nisl vel dui posuere, in vulputate augue dictum.</p>
           </div>
         </div>
-
-        <div class="program-v2-stage program-v2-stage--authority program-band--light">
-          <div class="program-v2-content">
-            <span class="program-v2-pill program-v2-pill--authority">For seven-figure companies</span>
-            <h2>Authority layers a more aggressive engine on top of real traction.</h2>
-            <p class="program-v2-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit magna non ipsum bibendum, a posuere arcu feugiat.</p>
-            <div class="program-v2-steps">
-              <div class="program-v2-step">
-                <strong>Demand</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="program-v2-step">
-                <strong>Expansion</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <div class="program-v2-step">
-                <strong>Control</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <a href="/programs/authority/" class="program-v2-link">Explore the Authority Program</a>
-          </div>
-          <div class="program-v2-visual">
-            <div class="program-v2-panel-title">Placeholder visual</div>
-            <div class="program-v2-visual-core">
-              <div>
-                <span class="program-v2-visual-label">Authority graphic</span>
-                <strong>Scale harder with more channels working together.</strong>
-              </div>
-              <div class="program-v2-visual-grid">
-                <span>Landing pages</span>
-                <span>Paid acquisition</span>
-                <span>Automation layer</span>
-                <span>Stronger coverage</span>
-              </div>
-              <p class="program-v2-visual-note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non libero in nibh tristique laoreet.</p>
-            </div>
-          </div>
-        </div>
+        <div class="program-stat">Placeholder visual area for future program-specific graphic or image.</div>
       </div>
     </div>
 
-    <div class="program-band">
-      <div class="program-v2-decision">
-        <div class="program-v2-decision-copy">
-          <div class="program-v2-kicker">Right Stage</div>
-          <h2 class="program-v2-title program-v2-title--wide">You do not need everything at once. You need the right next stage.</h2>
-          <p class="program-v2-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lectus eu risus rhoncus congue. Integer sodales lorem ac justo imperdiet, at pharetra nibh posuere.</p>
-        </div>
-        <div class="program-v2-action-card">
-          <h3>Not sure which one fits?</h3>
-          <p class="program-v2-note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis tortor sed justo tincidunt, sit amet auctor metus pharetra.</p>
-          <a href="/get-started/book-strategy-call/" class="btn btn--lime">Book a Strategy Call</a>
-        </div>
+    <div class="program-shell program-shell--intro">
+      <div class="program-heading">
+        <div class="program-kicker">Right Stage</div>
+        <h2>Start with the right stage, then scale from there</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at ultricies turpis. Integer pulvinar purus eu nunc pellentesque, sed volutpat lectus placerat. Curabitur semper sapien ac consequat efficitur.</p>
       </div>
     </div>
   </section>
