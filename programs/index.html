@@ -387,6 +387,226 @@
     .feature-card h3 { margin-bottom: 10px; }
     .summary-grid { margin-top: 28px; }
     .expect-grid, .faq-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .programs-stack {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 24px 96px;
+      display: grid;
+      gap: 28px;
+    }
+    .program-shell {
+      position: relative;
+      overflow: hidden;
+      padding: 36px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .program-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at top left, rgba(172,231,29,0.12), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(93,202,73,0.10), transparent 24%);
+      opacity: 0.9;
+    }
+    .program-shell > * { position: relative; z-index: 1; }
+    .program-shell--intro {
+      display: grid;
+      gap: 22px;
+    }
+    .program-shell--spotlight {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+    .program-shell--spotlight.program-shell--reverse {
+      grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.05fr);
+    }
+    .program-shell--spotlight.program-shell--reverse .program-visual {
+      order: -1;
+    }
+    .program-intro-grid,
+    .program-breakdown-grid {
+      display: grid;
+      gap: 18px;
+    }
+    .program-intro-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+    .program-breakdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .program-heading {
+      max-width: 760px;
+    }
+    .program-heading h2,
+    .program-copy h2 {
+      font-family: var(--font-h);
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.02;
+      font-style: italic;
+      font-weight: 800;
+      color: var(--white);
+      margin: 0 0 14px;
+      letter-spacing: -0.03em;
+    }
+    .program-heading p,
+    .program-copy p,
+    .program-mini-card p,
+    .program-stat,
+    .program-visual-note {
+      color: var(--body);
+    }
+    .program-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-family: var(--font-l);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--lime);
+    }
+    .program-kicker::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--lime);
+      box-shadow: 0 0 18px rgba(172,231,29,0.6);
+    }
+    .program-mini-card,
+    .program-compare-card,
+    .program-visual {
+      border-radius: 22px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .program-mini-card,
+    .program-compare-card {
+      padding: 22px;
+    }
+    .program-mini-card h3,
+    .program-compare-card h3 {
+      font-family: var(--font-h);
+      font-style: italic;
+      font-size: 24px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .program-mini-card ul,
+    .program-compare-card ul,
+    .program-bullets {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .program-mini-card li,
+    .program-compare-card li,
+    .program-bullets li {
+      display: flex;
+      gap: 12px;
+      color: rgba(255,255,255,0.8);
+    }
+    .program-mini-card li::before,
+    .program-compare-card li::before,
+    .program-bullets li::before {
+      content: '•';
+      color: var(--lime);
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+    .program-tier {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(172,231,29,0.09);
+      border: 1px solid rgba(172,231,29,0.18);
+      color: var(--lime);
+      font-family: var(--font-l);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .program-tier--authority {
+      background: rgba(93,202,73,0.08);
+      border-color: rgba(93,202,73,0.22);
+    }
+    .program-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .program-copy .btn { margin-top: 22px; align-self: flex-start; }
+    .program-visual {
+      min-height: 100%;
+      padding: 24px;
+      display: grid;
+      align-content: space-between;
+      background:
+        linear-gradient(135deg, rgba(172,231,29,0.10), transparent 45%),
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    }
+    .program-visual-frame {
+      min-height: 280px;
+      border-radius: 18px;
+      border: 1px dashed rgba(172,231,29,0.22);
+      background:
+        linear-gradient(135deg, rgba(7,16,10,0.92), rgba(10,22,12,0.8)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 24px),
+        repeating-linear-gradient(180deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 24px);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .program-visual-frame strong {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 26px;
+      font-style: italic;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .program-visual-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(172,231,29,0.18);
+      color: rgba(255,255,255,0.72);
+      font-family: var(--font-l);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .program-visual-note {
+      margin-top: 14px;
+      font-size: 14px;
+    }
+    .program-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      font-family: var(--font-l);
+      font-size: 13px;
+      color: rgba(255,255,255,0.66);
+    }
+    .program-stat::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--lime);
+      box-shadow: 0 0 16px rgba(172,231,29,0.65);
+    }
     .cta-band {
       display: grid;
       grid-template-columns: minmax(0,1.15fr) minmax(0,0.85fr);
@@ -425,8 +645,13 @@
       .feature-grid,
       .expect-grid,
       .faq-grid,
-      .cta-band { grid-template-columns: 1fr; }
+      .cta-band,
+      .program-intro-grid,
+      .program-breakdown-grid,
+      .program-shell--spotlight,
+      .program-shell--spotlight.program-shell--reverse { grid-template-columns: 1fr; }
       .hero-stats { grid-template-columns: 1fr; max-width: 420px; }
+      .program-shell--spotlight.program-shell--reverse .program-visual { order: 0; }
     }
     @media (max-width: 720px) {
       .simple-hero { min-height: auto; padding: 56px 0 28px; }
@@ -437,9 +662,13 @@
       .expect-card,
       .faq-card,
       .summary-card,
-      .cta-band { padding: 24px; }
+      .cta-band,
+      .program-shell { padding: 24px; }
+      .programs-stack { padding: 56px 20px 72px; }
+      .program-visual-frame { min-height: 220px; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .btn { width: 100%; }
+      .program-copy .btn { align-self: stretch; }
     }
   </style>
 </head>
@@ -722,12 +951,111 @@
       </div>
     </div>
   </section>
-  <section style="padding: 80px 0;">
-    <div style="max-width: var(--max, 1320px); margin: 0 auto; padding: 0 24px;">
-      <div style="border: 1px dashed rgba(172,231,29,0.28); border-radius: 24px; padding: 48px 28px; background: rgba(255,255,255,0.02); text-align: center;">
-        <span style="display: inline-block; margin-bottom: 14px; font-family: var(--font-l); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime);">Body Section</span>
-        <h2 style="font-family: var(--font-h); font-size: clamp(28px, 4vw, 42px); line-height: 1.05; font-style: italic; font-weight: 800; color: var(--white); margin: 0 0 14px;">[Blank body — we will design this shortly.]</h2>
-        <p style="max-width: 700px; margin: 0 auto; color: var(--body);">This page intentionally keeps only the header, hero, placeholder body, CTA, and footer until the final page design is ready.</p>
+  <section class="programs-stack">
+    <div class="program-shell program-shell--intro">
+      <div class="program-intro-grid">
+        <div class="program-heading">
+          <div class="program-kicker">Program Philosophy</div>
+          <h2>Why we build around programs instead of piecemeal services</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere, nibh ut feugiat faucibus, velit mauris feugiat arcu, vitae mattis nisl erat in augue. Sed luctus, eros eget tristique hendrerit, purus lorem feugiat turpis, vitae vulputate mi nibh ut justo.</p>
+        </div>
+        <div class="program-mini-card">
+          <h3>Why it works</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula, ligula vitae varius faucibus, massa lorem feugiat dui, nec faucibus libero nisl non arcu.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Praesent commodo lectus ac lorem faucibus, a luctus justo luctus.</li>
+            <li>Vivamus feugiat purus vel massa luctus, sed viverra ligula tincidunt.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-shell">
+      <div class="program-heading">
+        <div class="program-kicker">Quick Breakdown</div>
+        <h2>Two programs. Two stages of growth.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et tortor vitae ipsum aliquet fermentum. Curabitur feugiat, mi vel pharetra pharetra, nisl arcu malesuada massa, et dictum ex augue vitae purus.</p>
+      </div>
+      <div class="program-breakdown-grid">
+        <div class="program-compare-card">
+          <span class="program-tier">For six-figure companies</span>
+          <h3>Growth Program</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus sed arcu aliquet volutpat vel at tellus.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Morbi vulputate lorem sit amet justo malesuada, eu aliquet nibh aliquam.</li>
+            <li>Vestibulum at velit sed justo vulputate posuere.</li>
+          </ul>
+        </div>
+        <div class="program-compare-card">
+          <span class="program-tier program-tier--authority">For seven-figure companies</span>
+          <h3>Authority Program</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed risus sed arcu aliquet volutpat vel at tellus.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Morbi vulputate lorem sit amet justo malesuada, eu aliquet nibh aliquam.</li>
+            <li>Vestibulum at velit sed justo vulputate posuere.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-shell program-shell--spotlight">
+      <div class="program-copy">
+        <span class="program-tier">For six-figure companies</span>
+        <h2>Growth Program</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor magna at neque vulputate, ut efficitur nisi tristique. Nunc tristique, lorem sed commodo posuere, enim purus tempus lorem, et tempus libero tortor in mauris.</p>
+        <ul class="program-bullets">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Aliquam vehicula tortor a urna suscipit, id interdum arcu laoreet.</li>
+          <li>Phasellus feugiat eros in lectus accumsan, nec pulvinar orci faucibus.</li>
+          <li>Vivamus luctus lorem eu sem faucibus, ac facilisis neque malesuada.</li>
+        </ul>
+        <a href="/programs/growth/" class="btn btn--ghost">Explore the Growth Program</a>
+      </div>
+      <div class="program-visual">
+        <div class="program-visual-frame">
+          <div>
+            <span class="program-visual-label">Filler Visual</span>
+            <strong>Growth Program Graphic</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus nisl vel dui posuere, in vulputate augue dictum.</p>
+          </div>
+        </div>
+        <div class="program-stat">Placeholder visual area for future program-specific graphic or image.</div>
+      </div>
+    </div>
+
+    <div class="program-shell program-shell--spotlight program-shell--reverse">
+      <div class="program-copy">
+        <span class="program-tier program-tier--authority">For seven-figure companies</span>
+        <h2>Authority Program</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor magna at neque vulputate, ut efficitur nisi tristique. Nunc tristique, lorem sed commodo posuere, enim purus tempus lorem, et tempus libero tortor in mauris.</p>
+        <ul class="program-bullets">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Aliquam vehicula tortor a urna suscipit, id interdum arcu laoreet.</li>
+          <li>Phasellus feugiat eros in lectus accumsan, nec pulvinar orci faucibus.</li>
+          <li>Vivamus luctus lorem eu sem faucibus, ac facilisis neque malesuada.</li>
+        </ul>
+        <a href="/programs/authority/" class="btn btn--ghost">Explore the Authority Program</a>
+      </div>
+      <div class="program-visual">
+        <div class="program-visual-frame">
+          <div>
+            <span class="program-visual-label">Filler Visual</span>
+            <strong>Authority Program Graphic</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus nisl vel dui posuere, in vulputate augue dictum.</p>
+          </div>
+        </div>
+        <div class="program-stat">Placeholder visual area for future program-specific graphic or image.</div>
+      </div>
+    </div>
+
+    <div class="program-shell program-shell--intro">
+      <div class="program-heading">
+        <div class="program-kicker">Right Stage</div>
+        <h2>Start with the right stage, then scale from there</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at ultricies turpis. Integer pulvinar purus eu nunc pellentesque, sed volutpat lectus placerat. Curabitur semper sapien ac consequat efficitur.</p>
       </div>
     </div>
   </section>
