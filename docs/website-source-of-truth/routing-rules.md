@@ -53,6 +53,7 @@ domain `lawnandlandmarketing.com` after cutover. Audited 2026-06-23 against `htt
 - `/rock-solid-case-study/` -> `/case-studies/rock-solid/`
 - `/reviews/` -> `/resources/experiences-reviews/`
 - `/blog/` -> `/resources/blog/` (individual posts handled by the blog-migration redirect map)
+- `/blog/category/seo/` -> `/resources/blog/category/seo/` (both trailing-slash variants registered)
 - `/our-team/` -> `/about/#team`
 - `/is-marketing-right-for-us/` -> `/about/`
 - `/author/matt-foreman/` -> `/matt-foreman/` (INVERTED 2026-07-07: the entity hub is now the canonical page; the old author-archive URL 301s to it. The previous alias in the other direction was removed from `vercel.json`.)
@@ -76,6 +77,14 @@ domain `lawnandlandmarketing.com` after cutover. Audited 2026-06-23 against `htt
 ## Remaining Link QA To Handle Later
 - Decide whether any retired routes should eventually receive redirects at the hosting layer.
 - If a route is intentionally reintroduced later, record that decision before adding it back into internal linking.
+
+## 2026-07-30 migration consolidation
+- Repaired the old WordPress SEO-category 404 by permanently redirecting both `/blog/category/seo`
+  and `/blog/category/seo/` to the canonical SEO category hub.
+- Added contextual links from the homepage, SEO category hub, and three relevant articles to the
+  lawn-care and landscaping SEO service pages. These links are in body copy, not global navigation.
+- Kept mismatched legacy article redirects out of this low-risk batch. Those topics need genuinely
+  useful replacement articles before their redirects are changed.
 
 ## Killed routes — fuller list (keep out of nav, footer, CTAs, copy, breadcrumbs, sitemap, links)
 `/services/` (+ children) · `/pricing/` · `/resources/guides/` · `/resources/contact/` ·

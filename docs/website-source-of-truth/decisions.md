@@ -800,3 +800,19 @@
 - **Docs baseline:** newest operating reference is `docs/website-source-of-truth/current-state-2026-06-26.md`; audit rollback handoff is `docs/audit-rollback-handoff-2026-06-25.md`; combo-page directive is `docs/directives/combo-pages-agent-directive.md`.
 - **Mow Money, Mow Problems system page (2026-07-07):** `/marketing-services/mow-money-mow-problems/` is the branded name of L&L's whole digital-marketing system AND the genuine trademark specimen for USPTO Serial No. 99184265 (IC 035). It must stay REAL use: publicly reachable, indexable (never noindex), footer-linked sitewide (top of the Marketing Services column), working strategy-call CTAs, in `sitemap.xml`. Write the mark exactly **Mow Money, Mow Problems** (comma + capitalization locked); ™ on the H1 and the attribution line ("…is a digital marketing service of Lawn and Land Marketing LLC."). Hand-built page (hub-page chrome + inline style block) — never add the slug to `_content.json`/gen_service.py. Distinct from the podcast page under Resources; this one reads as a *service* brand on purpose.
 - **Matt Foreman entity hub (2026-07-07):** `/matt-foreman/` is the single canonical page for the PERSON entity (entity SEO / AI search / speaking + press). `/author/matt-foreman/` deleted + 301'd (both legacy alias redirects in `vercel.json` were pointing the OTHER way and were removed to prevent a loop). The Person `@id` `https://lawnandlandmarketing.com/#matt-foreman` NEVER changes; only `url`/`mainEntityOfPage` moved. Person `sameAs` = PERSONAL profiles (LinkedIn/Instagram/Facebook personal + Amazon book + Apple/Spotify/YouTube podcast + podcast site), never the company socials. gen_blog.py stamps ALL articles into the hub (`auth_path`). The media-kit bios + the one-line "entity sentence" are LOCKED wording; reuse verbatim on external profiles. Speaking section facts are owner-supplied (Seven Figure Agency, 2025 + 2026); never invent appearances. Title stays "Founder & Owner" (owner decision, not CEO).
+
+## 2026-07-30 — Post-migration SEO consolidation batch
+- **Decision:** prioritize a low-risk redirect and internal-link batch before publishing replacement
+  articles for mismatched legacy redirects. The production audit found the new site technically healthy,
+  but several old URLs still carried visibility and the new vertical SEO pages were underlinked.
+- **Redirect repair:** both variants of `/blog/category/seo/` now permanently redirect to
+  `/resources/blog/category/seo/`.
+- **Internal authority:** the homepage Local SEO panel, generated SEO category hub, local SEO guide,
+  seven-step landscaping SEO article, and landscape marketing guide now point contextually to the
+  lawn-care and/or landscaping SEO service pages.
+- **Generator durability:** SEO category intro links live in `_blog.json` via `introHtml` so `gen_blog.py`
+  preserves them. The generator now normalizes its pagination CSS, fixing a pre-existing non-idempotent
+  behavior that had duplicated the same style block on every run.
+- **Deferred intentionally:** do not redirect the old blogging, email-marketing, or CRM article URLs to
+  another broad destination. Restore each topic with a useful, current replacement page first, then change
+  its old redirect to the matching replacement.
