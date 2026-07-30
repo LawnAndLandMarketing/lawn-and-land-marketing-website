@@ -236,7 +236,10 @@ def stamp_episode_extras(h, p):
 HERO_FIG_RE = re.compile(r'<figure class="article-hero-img">.*?</figure>', re.S)
 
 def main():
-    base = inject(read("resources/blog/index.html"), PAGINATION_CSS)
+    # Normalize the generated index template so repeated runs stay byte-stable.
+    # Older runs appended PAGINATION_CSS every time, bloating every index page.
+    base = read("resources/blog/index.html").replace(PAGINATION_CSS, "")
+    base = inject(base, PAGINATION_CSS)
     pages = 0; cat_pages = 0; stamped = 0
 
     # ---- main paginated index ----
@@ -273,7 +276,8 @@ def main():
             pp = cp[i*PPP:(i+1)*PPP]
             base_url = "/resources/blog/category/%s/" % cat["slug"]
             back = '    <a class="blog-cat-back" href="/resources/blog/">&larr; All articles</a>'
-            intro = '    <p class="blog-cat-intro">%s</p>\n' % H(cat["intro"])
+            intro_copy = cat.get("introHtml") or H(cat["intro"])
+            intro = '    <p class="blog-cat-intro">%s</p>\n' % intro_copy
             sec = section("\n".join(card(p) for p in pp), pagination(pg, ctot, base_url), back, intro)
             h = put_section(base, sec)
             h = set_cat_hero(h, cat)

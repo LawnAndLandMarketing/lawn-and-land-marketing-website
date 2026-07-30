@@ -36,7 +36,8 @@ Notes: the edge cache can serve `/` stale for ~15+ min (`x-vercel-cache: HIT`, q
 
 ## Tokens & access (for agents)
 
-- **Local `vercel` CLI token on this Mac: INVALID/expired** (post org-migration). Do not debug with it. Use the **Vercel MCP connector** (list/get projects & deployments, fetch protected URLs) or the Actions pipeline.
+- **Local `vercel` CLI:** project and deployment read access was verified 2026-07-30. Production writes
+  still go through the GitHub `main` pipeline described above; do not bypass it with an ad hoc CLI deploy.
 - **`~/.github_token`**: classic PAT, `repo` scope only — no `workflow` scope (can't push workflow-file changes over HTTPS; **push via SSH**, which auths as the org) and no `read:org` (use `GH_TOKEN=$(cat ~/.github_token) gh …`, not `gh auth login`).
 
 ## Publishing an article — the checklist (every item, same commit)

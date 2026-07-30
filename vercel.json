@@ -283,6 +283,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/category/seo",
+      "destination": "/resources/blog/category/seo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/seo/",
+      "destination": "/resources/blog/category/seo/",
+      "permanent": true
+    },
+    {
       "source": "/blog/category/lawn-care-marketing",
       "destination": "/resources/blog/category/seo/",
       "permanent": true
