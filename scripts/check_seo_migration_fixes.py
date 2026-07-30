@@ -99,10 +99,22 @@ def check_generator_idempotency() -> None:
         assert count == 1, f"{relative} has {count} pagination style blocks; expected 1"
 
 
+def check_link_visibility() -> None:
+    homepage = read("index.html")
+    assert ".svc-panel-content p a {" in homepage, (
+        "homepage contextual service links need a visible inline-link style"
+    )
+    category = read("resources/blog/category/seo/index.html")
+    assert ".blog-cat-intro a{" in category, (
+        "generated category intro links need a visible inline-link style"
+    )
+
+
 def main() -> None:
     check_redirects()
     check_contextual_links()
     check_generator_idempotency()
+    check_link_visibility()
     print("SEO migration consolidation checks: PASS")
 
 
