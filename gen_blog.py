@@ -44,6 +44,8 @@ PAGINATION_CSS = """
     .blog-pagination a:hover{border-color:var(--lime);color:var(--lime);}
     .blog-pagination .blog-page-num{color:var(--muted);font-size:13px;letter-spacing:.04em;}
     .blog-cat-intro{max-width:680px;margin:0 0 6px;color:var(--body);font-size:17px;}
+    .blog-cat-intro a{color:var(--lime);border-bottom:1px solid rgba(172,231,29,.35);}
+    .blog-cat-intro a:hover{border-bottom-color:var(--lime);}
     .blog-cat-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-l);font-size:13px;color:var(--muted);margin-bottom:18px;}
     .blog-cat-back:hover{color:var(--lime);}
 """
@@ -104,6 +106,20 @@ SEC_RE = re.compile(r'<section class="blog-index">.*?</section>', re.S)
 def put_section(htmltext, sec): return SEC_RE.sub(lambda m: sec, htmltext, count=1)
 
 def inject(htmltext, css): return htmltext.replace("  </style>", css + "  </style>", 1)
+
+def normalize_blog_index_css(htmltext):
+    """Remove every prior generated blog-index CSS block, then insert one current block."""
+    start_token = ".blog-pagination{"
+    end_token = ".blog-cat-back:hover{color:var(--lime);}"
+    while start_token in htmltext:
+        token_start = htmltext.index(start_token)
+        block_start = token_start
+        while block_start and htmltext[block_start - 1] in " \t\r\n":
+            block_start -= 1
+        token_end = htmltext.index(end_token, token_start) + len(end_token)
+        block_end = token_end + (1 if htmltext[token_end:token_end + 1] == "\n" else 0)
+        htmltext = htmltext[:block_start] + htmltext[block_end:]
+    return inject(htmltext, PAGINATION_CSS)
 
 def set_meta(htmltext, title, desc, canon):
     # Attribute-order-proof: match the whole tag by its name=/property= key wherever the
@@ -236,10 +252,8 @@ def stamp_episode_extras(h, p):
 HERO_FIG_RE = re.compile(r'<figure class="article-hero-img">.*?</figure>', re.S)
 
 def main():
-    # Normalize the generated index template so repeated runs stay byte-stable.
-    # Older runs appended PAGINATION_CSS every time, bloating every index page.
-    base = read("resources/blog/index.html").replace(PAGINATION_CSS, "")
-    base = inject(base, PAGINATION_CSS)
+    # Normalize the generated index template so CSS edits and repeated runs stay byte-stable.
+    base = normalize_blog_index_css(read("resources/blog/index.html"))
     pages = 0; cat_pages = 0; stamped = 0
 
     # ---- main paginated index ----
