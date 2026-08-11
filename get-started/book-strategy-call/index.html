@@ -15,7 +15,7 @@
 <!-- Meta Pixel (Lawn & Land Marketing) -->
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init','235509009483991');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Strategy Call Calendar'});
+  fbq('init','235509009483991');fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=235509009483991&amp;ev=PageView&amp;noscript=1"/></noscript>
   <title>Book a Free Strategy Call | Lawn &amp; Land Marketing</title>
@@ -348,9 +348,46 @@
     </div>
     <div class="book-sched">
       <div class="book-cal" id="book" data-reveal="fade-up">
-        <div class="cal-card">
-          <iframe src="https://api.leadconnectorhq.com/widget/booking/u7agGU9Xwo0kjAsLlKif" scrolling="no" id="u7agGU9Xwo0kjAsLlKif_1781974474075" title="Book a free strategy call"></iframe>
+        <div class="cal-card" id="qual-gate">
+          <div style="padding:clamp(24px,4vw,36px);text-align:center;">
+            <span class="svc-eyebrow">One quick question</span>
+            <h2 style="font-family:var(--font-h);font-style:italic;font-weight:800;font-size:clamp(21px,2.6vw,28px);color:var(--white);margin:8px 0 10px;line-height:1.15;">What is your company doing in annual revenue?</h2>
+            <p style="font-size:15px;color:rgba(255,255,255,0.62);line-height:1.55;margin:0 0 22px;">We ask so we can point you somewhere genuinely useful. Our programs are built for companies doing $250,000 or more a year.</p>
+            <div style="display:grid;gap:10px;max-width:400px;margin:0 auto;">
+              <button type="button" class="qual-opt" data-q="0" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">Under $250,000</button>
+              <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">$250,000 to $750,000</button>
+              <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">$750,000 to $2 million</button>
+              <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">Over $2 million</button>
+            </div>
+          </div>
         </div>
+        <div class="cal-card" id="qual-cal" style="display:none;">
+          <iframe data-src="https://api.leadconnectorhq.com/widget/booking/u7agGU9Xwo0kjAsLlKif" scrolling="no" id="u7agGU9Xwo0kjAsLlKif_1781974474075" title="Book a free strategy call"></iframe>
+        </div>
+        <script>
+        (function(){
+          var gate=document.getElementById('qual-gate'), cal=document.getElementById('qual-cal');
+          if(!gate||!cal) return;
+          var frame=cal.querySelector('iframe');
+          Array.prototype.forEach.call(document.querySelectorAll('.qual-opt'), function(btn){
+            btn.addEventListener('mouseenter', function(){ btn.style.borderColor='var(--lime)'; });
+            btn.addEventListener('mouseleave', function(){ btn.style.borderColor='rgba(255,255,255,0.16)'; });
+            btn.addEventListener('click', function(){
+              if(btn.getAttribute('data-q')==='0'){
+                if(window.fbq) fbq('trackCustom','QualGateFailed',{band:btn.textContent.trim()});
+                window.location.href='/get-started/community/';
+                return;
+              }
+              if(window.fbq) fbq('trackCustom','QualGatePassed',{band:btn.textContent.trim()});
+              if(frame && !frame.src) frame.src = frame.getAttribute('data-src');
+              gate.style.display='none';
+              cal.style.display='block';
+              if(window.fbq) fbq('track','ViewContent',{content_name:'Strategy Call Calendar'});
+              cal.scrollIntoView({behavior:'smooth',block:'start'});
+            });
+          });
+        })();
+        </script>
         <p class="cal-fallback">Calendar not loading? <a href="tel:+17274967098">Call or text (727) 496-7098</a> or <a href="mailto:hello@lawnandlandmarketing.com">email us</a> and we'll get you booked.</p>
       </div>
       <aside class="book-aside" data-reveal="fade-up">
