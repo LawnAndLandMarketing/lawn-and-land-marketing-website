@@ -70,7 +70,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/marketing-for-landscapers.webp",
       "imageAlt": "Marketing for Landscapers: The System That Books Better Projects Year-Round",
       "video": null
     },
@@ -83,7 +83,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/aeration-and-overseeding-marketing.webp",
       "imageAlt": "Aeration and Overseeding Marketing: How to Book the Fall Rush Early",
       "video": null
     },
@@ -96,21 +96,8 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/fall-lawn-care-marketing.webp",
       "imageAlt": "Fall Lawn Care Marketing: How to Re-Sign Your Base Before Winter",
-      "video": null
-    },
-    {
-      "slug": "fall-lawn-care-marketing",
-      "title": "Fall Lawn Care Marketing: Book Aeration and Overseeding Jobs Early",
-      "excerpt": "The autumn money is aeration and overseeding, and the companies that win it start marketing in August.",
-      "datePublished": "2026-08-05",
-      "dateDisplay": "August 5, 2026",
-      "badge": "Strategy",
-      "cat": "strategy",
-      "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
-      "imageAlt": "Fall Lawn Care Marketing: Book Aeration and Overseeding Jobs Early",
       "video": null
     },
     {
@@ -122,7 +109,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/green-industry-marketing-agency.webp",
       "imageAlt": "What a Green Industry Marketing Agency Actually Does (and Why Specialization Wins)",
       "video": null
     },
@@ -135,7 +122,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-hardscaping-companies.webp",
       "imageAlt": "SEO for Hardscaping Companies: How to Win the High-Ticket Search",
       "video": null
     },
@@ -148,7 +135,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-lawn-care-companies.webp",
       "imageAlt": "SEO for Lawn Care Companies: How to Rank for Recurring Revenue",
       "video": null
     },
@@ -161,7 +148,7 @@
       "badge": "Ads & Social",
       "cat": "ads-social",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/google-ads-for-lawn-care-companies.webp",
       "imageAlt": "Google Ads for Lawn Care Companies: How to Turn Clicks Into Booked Programs",
       "video": null
     },
@@ -174,7 +161,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/lawn-care-seo-recurring-revenue.webp",
       "imageAlt": "Lawn Care SEO: How Treatment Companies Grow Recurring Revenue From Search",
       "video": null
     },
@@ -187,7 +174,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/landscaping-reputation-management.webp",
       "imageAlt": "Landscaping Reputation Management: Turn Great Work Into Booked Jobs",
       "video": null
     },
@@ -200,7 +187,7 @@
       "badge": "Ads & Social",
       "cat": "ads-social",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/google-ads-for-landscapers.webp",
       "imageAlt": "Google Ads for Landscapers: How to Turn Clicks Into Booked Installs",
       "video": null
     },
@@ -213,7 +200,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/landscaping-marketing-company.webp",
       "imageAlt": "What a Landscaping Marketing Company Should Actually Do for Your Business",
       "video": null
     },
@@ -226,7 +213,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-outdoor-living-companies.webp",
       "imageAlt": "SEO for Outdoor Living Companies: How to Fill the Build Calendar",
       "video": null
     },
@@ -252,7 +239,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/landscaper-website-design.webp",
       "imageAlt": "Landscaper Website Design That Books Bigger Jobs",
       "video": null
     },
@@ -265,7 +252,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/ai-search-optimization-for-landscapers.webp",
       "imageAlt": "AI Search Optimization for Landscapers: How to Get Recommended by ChatGPT",
       "video": null
     },
@@ -278,7 +265,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/what-a-lawn-care-marketing-agency-does.webp",
       "imageAlt": "What a Lawn Care Marketing Agency Actually Does for Recurring Revenue",
       "video": null
     },
@@ -307,7 +294,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/choosing-a-landscaping-marketing-agency.webp",
       "imageAlt": "How to Choose a Landscaping Marketing Agency That Books Bigger Jobs",
       "video": null
     },
@@ -320,7 +307,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/excavation-marketing.webp",
       "imageAlt": "Excavation Marketing: How to Keep the Iron Working Year-Round",
       "video": null
     },
@@ -333,7 +320,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/septic-company-marketing.webp",
       "imageAlt": "Septic Company Marketing: How Installers Win More High-Ticket Jobs",
       "video": null
     },
@@ -346,7 +333,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-landscaping-companies.webp",
       "imageAlt": "SEO for Landscaping Companies: How to Rank and Book Better Projects",
       "video": null
     },
@@ -359,7 +346,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-septic-companies.webp",
       "imageAlt": "SEO for Septic Companies: How Installers Win High-Ticket Jobs on Search",
       "video": null
     },
@@ -372,7 +359,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-land-clearing-companies.webp",
       "imageAlt": "SEO for Land Clearing Companies: How to Fill a Lumpy Pipeline",
       "video": null
     },
@@ -385,7 +372,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-excavation-companies.webp",
       "imageAlt": "SEO for Excavation Companies: How to Keep the Iron Working",
       "video": null
     },
@@ -398,7 +385,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/ai-marketing-for-lawn-care.webp",
       "imageAlt": "AI Marketing for Lawn Care: A Practical Playbook for Owners",
       "video": null
     },
@@ -411,7 +398,7 @@
       "badge": "SEO",
       "cat": "seo",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/seo-for-holiday-lighting-companies.webp",
       "imageAlt": "SEO for Holiday Lighting Companies: Rank Before the Rush",
       "video": null
     },
@@ -424,7 +411,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "4 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/christmas-light-installation-marketing.webp",
       "imageAlt": "Christmas Light Installation Marketing: How to Book the Season Before the Rush",
       "video": null
     },
@@ -437,7 +424,7 @@
       "badge": "Strategy",
       "cat": "strategy",
       "readTime": "5 min read",
-      "image": "/assets/images/og-share.jpg",
+      "image": "/assets/images/blog/cards/holiday-lighting-marketing.webp",
       "imageAlt": "Holiday Lighting Marketing: How to Book the Season Before the Rush",
       "video": null
     },
