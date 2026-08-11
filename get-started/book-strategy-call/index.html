@@ -348,27 +348,28 @@
     </div>
     <div class="book-sched">
       <div class="book-cal" id="book" data-reveal="fade-up">
-        <div class="cal-card" id="qual-gate">
-          <div style="padding:clamp(24px,4vw,36px);text-align:center;">
-            <span class="svc-eyebrow">One quick question</span>
-            <h2 style="font-family:var(--font-h);font-style:italic;font-weight:800;font-size:clamp(21px,2.6vw,28px);color:var(--white);margin:8px 0 10px;line-height:1.15;">What is your company doing in annual revenue?</h2>
-            <p style="font-size:15px;color:rgba(255,255,255,0.62);line-height:1.55;margin:0 0 22px;">This helps us tailor the conversation to where your business actually is.</p>
-            <div style="display:grid;gap:10px;max-width:400px;margin:0 auto;">
-              <button type="button" class="qual-opt" data-q="0" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">Under $250,000</button>
-              <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">$250,000 to $750,000</button>
-              <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">$750,000 to $2 million</button>
-              <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">Over $2 million</button>
+        <div id="qual-wrap" style="position:relative;">
+          <div class="cal-card" id="qual-cal">
+            <iframe src="https://api.leadconnectorhq.com/widget/booking/u7agGU9Xwo0kjAsLlKif" scrolling="no" id="u7agGU9Xwo0kjAsLlKif_1781974474075" title="Book a free strategy call"></iframe>
+          </div>
+          <div class="cal-card" id="qual-gate" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;background:#0a1109;">
+            <div style="padding:clamp(20px,3vw,32px);text-align:center;width:100%;">
+              <span class="svc-eyebrow">One quick question</span>
+              <h2 style="font-family:var(--font-h);font-style:italic;font-weight:800;font-size:clamp(21px,2.6vw,28px);color:var(--white);margin:8px 0 10px;line-height:1.15;">What is your company doing in annual revenue?</h2>
+              <p style="font-size:15px;color:rgba(255,255,255,0.62);line-height:1.55;margin:0 0 22px;">This helps us tailor the conversation to where your business actually is.</p>
+              <div style="display:grid;gap:10px;max-width:400px;margin:0 auto;">
+                <button type="button" class="qual-opt" data-q="0" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">Under $250,000</button>
+                <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">$250,000 to $750,000</button>
+                <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">$750,000 to $2 million</button>
+                <button type="button" class="qual-opt" data-q="1" style="padding:14px 20px;border:1.5px solid rgba(255,255,255,0.16);border-radius:12px;background:rgba(255,255,255,0.04);color:var(--white);font-family:var(--font-l);font-size:15px;font-weight:600;cursor:pointer;">Over $2 million</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="cal-card" id="qual-cal" style="display:none;">
-          <iframe src="https://api.leadconnectorhq.com/widget/booking/u7agGU9Xwo0kjAsLlKif" scrolling="no" id="u7agGU9Xwo0kjAsLlKif_1781974474075" title="Book a free strategy call"></iframe>
-        </div>
         <script>
         (function(){
-          var gate=document.getElementById('qual-gate'), cal=document.getElementById('qual-cal');
-          if(!gate||!cal) return;
-          var frame=cal.querySelector('iframe');
+          var gate=document.getElementById('qual-gate');
+          if(!gate) return;
           Array.prototype.forEach.call(document.querySelectorAll('.qual-opt'), function(btn){
             btn.addEventListener('mouseenter', function(){ btn.style.borderColor='var(--lime)'; });
             btn.addEventListener('mouseleave', function(){ btn.style.borderColor='rgba(255,255,255,0.16)'; });
@@ -380,16 +381,9 @@
               }
               if(window.fbq) fbq('trackCustom','QualGatePassed',{band:btn.textContent.trim()});
               gate.style.display='none';
-              cal.style.display='block';
               var fb=document.getElementById('cal-fallback'); if(fb) fb.style.display='';
-              // GHL sizes the iframe via postMessage; nudge it now that the card is visible
-              try{ window.dispatchEvent(new Event('resize')); }catch(e){}
-              // Safety net: if GHL has not set an explicit height shortly after reveal, give it room
-              setTimeout(function(){
-                if(frame && !frame.style.height){ frame.style.height='820px'; }
-              }, 1800);
               if(window.fbq) fbq('track','ViewContent',{content_name:'Strategy Call Calendar'});
-              cal.scrollIntoView({behavior:'smooth',block:'start'});
+              document.getElementById('qual-wrap').scrollIntoView({behavior:'smooth',block:'start'});
             });
           });
         })();
