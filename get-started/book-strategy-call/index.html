@@ -266,7 +266,8 @@
     .expect-card h3 { font-family:var(--font-h); font-style:italic; font-weight:800; font-size:18px; color:var(--white); margin:0 0 8px; }
     .expect-card p { font-family:var(--font-b); font-size:14.5px; line-height:1.55; color:rgba(255,255,255,0.66); margin:0; }
     .cal-card { max-width:940px; margin:0 auto; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.1); border-radius:22px; padding:16px; }
-    .cal-card iframe { width:100%; min-height:420px; border:none; border-radius:12px; display:block; background:transparent; }
+    .cal-card iframe { width:100%; min-height:820px; border:none; border-radius:12px; display:block; background:transparent; }
+    @media (max-width:760px){ .cal-card iframe { min-height:1000px; } }
     .cal-reassure { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 24px; margin-top:26px; font-family:var(--font-b); font-size:14px; color:rgba(255,255,255,0.62); }
     .cal-reassure span { display:inline-flex; align-items:center; gap:8px; }
     .cal-reassure svg { width:16px; height:16px; stroke:var(--lime); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
