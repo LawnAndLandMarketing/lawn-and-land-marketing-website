@@ -362,7 +362,7 @@
           </div>
         </div>
         <div class="cal-card" id="qual-cal" style="display:none;">
-          <iframe data-src="https://api.leadconnectorhq.com/widget/booking/u7agGU9Xwo0kjAsLlKif" scrolling="no" id="u7agGU9Xwo0kjAsLlKif_1781974474075" title="Book a free strategy call"></iframe>
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/u7agGU9Xwo0kjAsLlKif" scrolling="no" id="u7agGU9Xwo0kjAsLlKif_1781974474075" title="Book a free strategy call"></iframe>
         </div>
         <script>
         (function(){
@@ -379,10 +379,15 @@
                 return;
               }
               if(window.fbq) fbq('trackCustom','QualGatePassed',{band:btn.textContent.trim()});
-              if(frame && !frame.src) frame.src = frame.getAttribute('data-src');
               gate.style.display='none';
               cal.style.display='block';
               var fb=document.getElementById('cal-fallback'); if(fb) fb.style.display='';
+              // GHL sizes the iframe via postMessage; nudge it now that the card is visible
+              try{ window.dispatchEvent(new Event('resize')); }catch(e){}
+              // Safety net: if GHL has not set an explicit height shortly after reveal, give it room
+              setTimeout(function(){
+                if(frame && !frame.style.height){ frame.style.height='820px'; }
+              }, 1800);
               if(window.fbq) fbq('track','ViewContent',{content_name:'Strategy Call Calendar'});
               cal.scrollIntoView({behavior:'smooth',block:'start'});
             });
