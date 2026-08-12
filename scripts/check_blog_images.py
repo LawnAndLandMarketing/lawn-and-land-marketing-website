@@ -47,6 +47,10 @@ else:
     for p in data["posts"]:
         if f"/resources/blog/{p['slug']}/" not in sm_raw:
             errors.append(f"SITEMAP MISSING POST: {p['slug']}")
+    import re as _re
+    locs = _re.findall(r"<loc>([^<]*)</loc>", sm_raw)
+    for loc in sorted({u for u in locs if locs.count(u) > 1}):
+        errors.append(f"SITEMAP DUPLICATE URL: {loc}")
 
 if errors:
     print("BLOG QUALITY GATE: FAIL")
