@@ -33,9 +33,25 @@ for p in data["posts"]:
     if img and not os.path.exists(os.path.join(ROOT, img.lstrip("/"))):
         errors.append(f"IMAGE FILE MISSING on disk: {slug} -> {img}")
 
+# --- sitemap gate (added after the Aug 2026 empty-sitemap incident) ---
+import xml.etree.ElementTree as ET
+sm_path = os.path.join(ROOT, "sitemap.xml")
+sm_raw = open(sm_path, encoding="utf-8").read() if os.path.exists(sm_path) else ""
+if len(sm_raw.strip()) < 200:
+    errors.append(f"SITEMAP EMPTY/TINY: sitemap.xml is {len(sm_raw)} bytes")
+else:
+    try:
+        ET.fromstring(sm_raw)
+    except ET.ParseError as e:
+        errors.append(f"SITEMAP NOT WELL-FORMED XML: {e}")
+    for p in data["posts"]:
+        if f"/resources/blog/{p['slug']}/" not in sm_raw:
+            errors.append(f"SITEMAP MISSING POST: {p['slug']}")
+
 if errors:
-    print("BLOG IMAGE GATE: FAIL")
+    print("BLOG QUALITY GATE: FAIL")
     for e in errors:
         print("  -", e)
     sys.exit(1)
-print(f"BLOG IMAGE GATE: OK ({len(data['posts'])} posts, all images unique and present)")
+print(f"BLOG QUALITY GATE: OK ({len(data['posts'])} posts; images unique; sitemap "
+      f"well-formed with every post present)")
