@@ -379,6 +379,14 @@
                 return;
               }
               if(window.fbq) fbq('trackCustom','QualGatePassed',{band:btn.textContent.trim()});
+              // carry the gate answer into the booking URL so it lands on the contact record
+              try{
+                var fr=cal.querySelector('iframe');
+                if(fr){
+                  var base=fr.src.split('?')[0];
+                  fr.src = base + '?revenue_band=' + encodeURIComponent(btn.textContent.trim());
+                }
+              }catch(e){}
               gate.style.display='none';
               cal.style.display='block';
               var fb=document.getElementById('cal-fallback'); if(fb) fb.style.display='';
