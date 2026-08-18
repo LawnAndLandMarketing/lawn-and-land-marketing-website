@@ -816,7 +816,3 @@
 - **Deferred intentionally:** do not redirect the old blogging, email-marketing, or CRM article URLs to
   another broad destination. Restore each topic with a useful, current replacement page first, then change
   its old redirect to the matching replacement.
-
-## 2026-08-18 — Remove internal media-kit scaffolding from Matt Foreman page
-- **Decision:** remove the public “Writing about Matt? Use these.” media-kit section, including the canned one-line, short, and full bios plus download actions. The material was AI/editorial scaffolding and is not appropriate public-facing website content.
-- **Preserved:** `/matt-foreman/` remains the canonical Matt Foreman entity page, including the entity metadata, story, speaking credentials, direct booking email, and article archive.
